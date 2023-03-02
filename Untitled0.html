@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tugas 1 | Crawling Twitter with Twint &#8212; Fikri Ainun Najib</title>
+    <title>Tugas 1 | Crawling Twitter with snscrape &#8212; Fikri Ainun Najib</title>
   
   
   
@@ -159,7 +159,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Tugas 1 | Crawling Twitter with Twint
+                        Tugas 1 | Crawling Twitter with snscrape
                       </a>
                     </li>
                 
@@ -278,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Tugas 1 | Crawling Twitter with Twint
+                        Tugas 1 | Crawling Twitter with snscrape
                       </a>
                     </li>
                 
@@ -380,7 +380,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Task</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 1 | Crawling Twitter with Twint</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 1 | Crawling Twitter with snscrape</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks2.html"><strong>Tugas 2 | Web Scraping (https://pta.trunojoyo.ac.id/)</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks3.html"><strong>Tugas 3 | Web Scraping (https://www.tribunnews.com/)</strong></a></li>
 </ul>
@@ -552,7 +552,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 1 | Crawling Twitter with Twint</h1>
+    <h1>Tugas 1 | Crawling Twitter with snscrape</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -586,8 +586,8 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-1-crawling-twitter-with-twint">
-<h1><strong>Tugas 1 | Crawling Twitter with Twint</strong><a class="headerlink" href="#tugas-1-crawling-twitter-with-twint" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-1-crawling-twitter-with-snscrape">
+<h1><strong>Tugas 1 | Crawling Twitter with snscrape</strong><a class="headerlink" href="#tugas-1-crawling-twitter-with-snscrape" title="Permalink to this heading">#</a></h1>
 <p>Data crawling adalah proses automatis untuk mengumpulkan dan mengindeks data dari berbagai sumber seperti situs web, database, atau dokumen. Proses ini menggunakan software atau aplikasi khusus yang disebut “twint” untuk mengakses sumber data dan mengambil informasi yang dibutuhkan.</p>
 <div class="section" id="install-libary">
 <h2>Install Libary<a class="headerlink" href="#install-libary" title="Permalink to this heading">#</a></h2>
@@ -599,26 +599,17 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting snscrape
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading snscrape-0.5.0.20230113-py3-none-any.whl (69 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/69.2 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">69.2/69.2 KB</span> <span class=" -Color -Color-Red">2.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: filelock in /usr/local/lib/python3.8/dist-packages (from snscrape) (3.9.0)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from snscrape) (4.6.3)
-Requirement already satisfied: pytz in /usr/local/lib/python3.8/dist-packages (from snscrape) (2022.7.1)
+Requirement already satisfied: snscrape in /usr/local/lib/python3.8/dist-packages (0.5.0.20230113)
 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.8/dist-packages (from snscrape) (2.25.1)
+Requirement already satisfied: pytz in /usr/local/lib/python3.8/dist-packages (from snscrape) (2022.7.1)
+Requirement already satisfied: filelock in /usr/local/lib/python3.8/dist-packages (from snscrape) (3.9.0)
 Requirement already satisfied: lxml in /usr/local/lib/python3.8/dist-packages (from snscrape) (4.9.2)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from snscrape) (4.6.3)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
 Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: snscrape
-Successfully installed snscrape-0.5.0.20230113
 </pre></div>
 </div>
 </div>
@@ -676,31 +667,31 @@ Successfully installed snscrape-0.5.0.20230113
   tweets.append([tweet.date, tweet.username, tweet.content])
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Date             User  \
-0   2023-03-02 04:09:04+00:00         Urpin168   
-1   2023-03-02 04:08:27+00:00       ardi_riau5   
-2   2023-03-02 04:08:14+00:00     Tery44117487   
-3   2023-03-02 04:07:29+00:00        Mottakaal   
-4   2023-03-02 04:07:22+00:00  kokoronotomo911   
-..                        ...              ...   
-495 2023-03-02 02:24:51+00:00  CatatanPelajarJ   
-496 2023-03-02 02:24:15+00:00         YimaNeng   
-497 2023-03-02 02:23:41+00:00         Lese0202   
-498 2023-03-02 02:22:28+00:00  ibnu_s_rIxiiIAs   
-499 2023-03-02 02:22:12+00:00     BugBunny1076   
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Date            User  \
+0   2023-03-02 04:13:04+00:00  ricky_aja_gitu   
+1   2023-03-02 04:12:51+00:00    chandra_6813   
+2   2023-03-02 04:12:50+00:00       AjieNdoro   
+3   2023-03-02 04:12:47+00:00         IdSinpo   
+4   2023-03-02 04:12:39+00:00        aLhaadi_   
+..                        ...             ...   
+495 2023-03-02 02:29:47+00:00  RecehRecehkoin   
+496 2023-03-02 02:29:46+00:00  RecehRecehkoin   
+497 2023-03-02 02:29:44+00:00  RecehRecehkoin   
+498 2023-03-02 02:29:43+00:00  RecehRecehkoin   
+499 2023-03-02 02:29:43+00:00  RecehRecehkoin   
 
                                                  Tweet  
-0    Gelar Dialog Rakyat, Masyarakat Sulteng Dorong...  
-1    Pak @aniesbaswedan dan mas @agusyudhoyono Koal...  
-2    Pak @aniesbaswedan ,,,,,,\nKalau helm proyek u...  
-3    @KIRA_Koey @Adjisar @alfatih200319 @aniesbaswe...  
-4    @aniesbaswedan @YGLvoices @NTUsg https://t.co/...  
+0    @Hasbil_Lbs @PDemokrat @aniesbaswedan @AgusYud...  
+1    @OmHardiman @ruhutsitompul Ada kadrun busuk ke...  
+2    @aniesbaswedan @YGLvoices @NTUsg Selama ini Si...  
+3    Anies Baswedan Ikut Rapat Majelis Tinggi Parta...  
+4    Event formula e 2023 akan digelar kembali, @an...  
 ..                                                 ...  
-495  @PDemokrat Bisa titip prtanyaan ke bacapres pa...  
-496  @SalvatoreGiman @gtobing2903 @aniesbaswedan Et...  
-497  @MudasirRomini @Dennysiregar7 @aniesbaswedan @...  
-498  @BosPurwa @msaid_didu @aniesbaswedan Oleh kare...  
-499  @aniesbaswedan @YGLvoices @NTUsg Uda. Loe bali...  
+495  Kita gabutuh orang yang suka halu kaya anies #...  
+496  Udah ngaco banget si anies ini #AniesBaswedan ...  
+497  Anies ini ga bener banget si #AniesBaswedan #A...  
+498  Politik Identitas terus si Anies ! #AniesBaswe...  
+499  Kita ga percaya sama anies baswedan alias wan ...  
 
 [500 rows x 3 columns]
 </pre></div>
