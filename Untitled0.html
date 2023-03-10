@@ -168,6 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="notebooks2.html"><strong>Tugas 2 | Web Scraping (https://pta.trunojoyo.ac.id/)</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks3.html"><strong>Tugas 3 | Web Scraping (https://www.tribunnews.com/)</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Untitled1.html"><strong>Tugas 4 | Pipelines</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled2.html"><strong>Tugas 4 | Pipelines With PCA</strong></a></li>
 </ul>
 
     </div>
@@ -419,25 +420,25 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
+Collecting snscrape
   Downloading snscrape-0.6.0.20230303-py3-none-any.whl (71 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.6 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.6/71.6 KB</span> <span class=" -Color -Color-Red">2.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.9.0)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.6.3)
-Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.25.1)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.6/71.6 KB</span> <span class=" -Color -Color-Red">3.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.25.1)
+Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.9.0)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.6.3)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: snscrape
-Successfully installed snscrape-0.6.0.20230303
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed snscrape-0.6.0.20230303
 </pre></div>
 </div>
 </div>
@@ -496,30 +497,30 @@ Successfully installed snscrape-0.6.0.20230303
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Date             User  \
-0   2023-03-09 02:58:07+00:00        RiaKeynou   
-1   2023-03-09 02:58:01+00:00     RSeptianEGeo   
-2   2023-03-09 02:57:40+00:00         AgungBha   
-3   2023-03-09 02:57:40+00:00     YakuzaValHen   
-4   2023-03-09 02:57:39+00:00    AncolMangkrak   
+0   2023-03-10 15:01:55+00:00       dwi_nantoo   
+1   2023-03-10 15:01:45+00:00  critapewayangan   
+2   2023-03-10 15:01:44+00:00         mak_iyik   
+3   2023-03-10 15:01:42+00:00        riksayuda   
+4   2023-03-10 15:01:42+00:00      mayapada812   
 ..                        ...              ...   
-495 2023-03-09 01:12:29+00:00  MynameMylastn13   
-496 2023-03-09 01:11:54+00:00     DedyFirdaus1   
-497 2023-03-09 01:11:39+00:00    NovelBamukmin   
-498 2023-03-09 01:11:18+00:00    alfatih200319   
-499 2023-03-09 01:11:09+00:00       CeritaAHY_   
+495 2023-03-10 13:09:00+00:00     panjianom102   
+496 2023-03-10 13:08:40+00:00        dyahNeZza   
+497 2023-03-10 13:08:29+00:00      Anand811207   
+498 2023-03-10 13:08:21+00:00    Kembara082022   
+499 2023-03-10 13:07:31+00:00       _Goentoer_   
 
                                                  Tweet  
-0    @bluffmachoo @DioR3born @aniesbaswedan Baiyuuu...  
-1    Menangkan Anies Baswedan, Nasdem Akan Banyak L...  
-2    @GeiszChalifah Baby sitter nya @aniesbaswedan ...  
-3    @AndromedaMcfc @Totok0912 @MohammadMonash @ani...  
-4    @alextham878 Anus gak semangat, yg hadir bukan...  
+0    Mas @aniesbaswedan adlh cnth pemimpin nasional...  
+1    Ayo gabung dengan Capre Bu Dayang...\nhttps://...  
+2    @DavidSutarno2 @bapakbagus4 @ElangPSA1 @Dayang...  
+3                     @smh  \n@aniesbaswedan is a li**  
+4    @BedindeGila1 @Rasto66010876 @Nagashima007 @cu...  
 ..                                                 ...  
-495  @abcnews @aniesbaswedan @bevvo14 https://t.co/...  
-496  @Tan_Mar3M @AyatMamas @aniesbaswedan Mungkin k...  
-497  IBHRS adalah imam besar yang akan menentukan d...  
-498  @jansen_jsp @aniesbaswedan @AgusYudhoyono Calo...  
-499  Demokrat Sebut Mayoritas Konstituen Inginkan D...  
+495  @sinyo_swana @RaharjoBryan @Trending_Issue @an...  
+496  @nulbesars @anto_djaf66 @aniesbaswedan @Nurulk...  
+497  @aniesbaswedan @ourANU Memang keren Pk Anies,c...  
+498  @aniesbaswedan @ABCaustralia @bevvo14 Gak puny...  
+499  Artinya @aniesbaswedan adalah gubernur DKI yg ...  
 
 [500 rows x 3 columns]
 </pre></div>
