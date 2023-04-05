@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -37,8 +37,8 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -169,6 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="notebooks3.html"><strong>Tugas 3 | Web Scraping (https://www.tribunnews.com/)</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Untitled1.html"><strong>Tugas 4 | Pipelines</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Untitled2.html"><strong>Tugas 5 | Pipelines With PCA</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled3.html"><strong>Tugas 6 | TimeSeries Dataset airline-passengers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled4.html"><strong>UTS | Data (https://pta.trunojoyo.ac.id/) TF-IDF</strong></a></li>
 </ul>
 
     </div>
@@ -420,16 +422,26 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: snscrape in /usr/local/lib/python3.9/dist-packages (0.6.0.20230303)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
+  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 KB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.6.3)
-Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.9.0)
-Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.25.1)
+Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.10.7)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;snscrape) (2.4)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: snscrape
+Successfully installed snscrape-0.6.2.20230320
 </pre></div>
 </div>
 </div>
@@ -487,31 +499,31 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
   tweets.append([tweet.date, tweet.username, tweet.content])
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Date             User  \
-0   2023-03-10 15:09:07+00:00  RudiUto37921374   
-1   2023-03-10 15:08:55+00:00      mayapada812   
-2   2023-03-10 15:08:41+00:00        Syarman59   
-3   2023-03-10 15:08:35+00:00    CayderSackidi   
-4   2023-03-10 15:08:24+00:00     BedindeGila1   
-..                        ...              ...   
-495 2023-03-10 13:16:53+00:00       sasakpujut   
-496 2023-03-10 13:16:45+00:00       om_eprajol   
-497 2023-03-10 13:16:42+00:00       koezoemach   
-498 2023-03-10 13:16:18+00:00         cuayong1   
-499 2023-03-10 13:16:03+00:00     beniakatsuki   
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Date            User  \
+0   2023-04-05 07:59:04+00:00       ferry_kdg   
+1   2023-04-05 07:58:53+00:00    RahmanSyurya   
+2   2023-04-05 07:57:56+00:00  nuraini_pitono   
+3   2023-04-05 07:57:12+00:00    RudiantaraWR   
+4   2023-04-05 07:56:12+00:00   Predator_4848   
+..                        ...             ...   
+495 2023-04-05 03:30:40+00:00         JokMeta   
+496 2023-04-05 03:30:32+00:00        pleckaaa   
+497 2023-04-05 03:30:16+00:00          pixtag   
+498 2023-04-05 03:30:06+00:00    awanda_altin   
+499 2023-04-05 03:29:39+00:00     Rich1467552   
 
                                                  Tweet  
-0           @hardye76 @aniesbaswedan rekam jejak busuk  
-1    @BedindeGila1 @Nagashima007 @cuayong1 @AntonKu...  
-2    @OlopanAruan2 @aniesbaswedan @NasDem Karna tak...  
-3    @FPKSDPRRI @lediahanifa @aniesbaswedan Demi al...  
-4    @mayapada812 @Nagashima007 @cuayong1 @AntonKu0...  
+0                           @DwCuiz @aniesbaswedan 🙏🙏🙏  
+1     @__AnakKolong @PDI_Perjuangan 10. Anies Baswedan  
+2    @Metro_TV @aniesbaswedan Lagu jawa menthok men...  
+3    @Metro_TV @aniesbaswedan 🤣🤣🤣 Cuma Bacot https:...  
+4    @yusufagro @aniesbaswedan @are_inismyname @BAN...  
 ..                                                 ...  
-495  @_Ayu_aja @ElinaDio @om_eprajol @Siantar72 @Pa...  
-496  @_Ayu_aja @Siantar72 @Partai_Slebew @ElinaDio ...  
-497  @zarnaout45 habisnya 2 unit mobil dinas lamany...  
-498  @LumowaS @WAHYU_UNIFORM @AntonKu08408962 @Naga...  
-499  Emak-Emak Bersatu Tak Bisa Dikalahkan !! Cc: @...  
+495  Warga rembang menolak Kedatangan Anies Basweda...  
+496  Kekuatan semakin bertambah. Kemenangan semakin...  
+497  Kekuatan semakin bertambah. Kemenangan semakin...  
+498               @Metro_TV @aniesbaswedan OMONG BESAR  
+499  @ikenBali_Terus @Metro_TV @aniesbaswedan https...  
 
 [500 rows x 3 columns]
 </pre></div>
@@ -547,7 +559,10 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="markdown-notebooks.html"
@@ -567,7 +582,10 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -593,7 +611,7 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -623,7 +641,7 @@ By Fikri Ainun Najib
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -632,8 +650,8 @@ By Fikri Ainun Najib
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

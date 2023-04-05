@@ -38,7 +38,7 @@ twint.run.Search(twi)
 
 [0;31m[0m
 [0;31mRefreshTokenException[0mTraceback (most recent call last)
-[0;32m<ipython-input-6-a973770352d1>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-6-a973770352d1>[0m in [0;36m<cell line: 15>[0;34m()[0m
 [1;32m     13[0m [0;31m# try:[0m[0;34m[0m[0;34m[0m[0m
 [1;32m     14[0m [0;31m# twint.run.Search(twi)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m---> 15[0;31m [0mtwint[0m[0;34m.[0m[0mrun[0m[0;34m.[0m[0mSearch[0m[0;34m([0m[0mtwi[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
