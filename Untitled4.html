@@ -415,18 +415,23 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksekusi-ke-model">Eksekusi ke Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-clustering">K-means Clustering</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-percobaan-n-component-1-25">Untuk Percobaan n_component =1-25</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akurasi-tertinggi">Hasil Akurasi Tertinggi</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gausian-naive-bayes">Gausian Naive Bayes</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-libary">inisialisasi libary</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-percobaan-n-component-1-25">Untuk Percobaan n_component = 1-25</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akurasi-tertinggi">Hasil Akurasi Tertinggi</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Untuk Percobaan n_component = 1-25</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hasil Akurasi Tertinggi</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akurasi-pada-plot">Hasil Akurasi Pada Plot</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbor-k-nn">k-Nearest Neighbor (k-NN)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">inisialisasi libary</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">inisialisasi libary</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-percobaan-n-component-1-25-dan-n-neigboars-1-25">Untuk Percobaan n_component 1-25 dan n_neigboars 1-25</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hasil Akurasi Tertinggi</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Hasil Akurasi pada Plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Hasil Akurasi Tertinggi</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Hasil Akurasi pada Plot</a></li>
 </ul>
 </li>
 </ul>
@@ -461,7 +466,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ec80e9ed-7806-47e2-8505-549ff40e96a7">
+  <div id="df-7837f498-0f91-42ca-9e52-bb0d6d1c3265">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -593,7 +598,7 @@ document.write(`
 </table>
 <p>860 rows × 6 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ec80e9ed-7806-47e2-8505-549ff40e96a7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7837f498-0f91-42ca-9e52-bb0d6d1c3265')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -644,12 +649,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ec80e9ed-7806-47e2-8505-549ff40e96a7 button.colab-df-convert');
+          document.querySelector('#df-7837f498-0f91-42ca-9e52-bb0d6d1c3265 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ec80e9ed-7806-47e2-8505-549ff40e96a7');
+          const element = document.querySelector('#df-7837f498-0f91-42ca-9e52-bb0d6d1c3265');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -680,7 +685,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-174c2e35-b295-4b55-9aa1-d68e6c91ce84">
+  <div id="df-fa9a2758-d071-4ad5-ab12-18be21f2fb4e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -776,7 +781,7 @@ document.write(`
 </table>
 <p>805 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-174c2e35-b295-4b55-9aa1-d68e6c91ce84')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-fa9a2758-d071-4ad5-ab12-18be21f2fb4e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -827,12 +832,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-174c2e35-b295-4b55-9aa1-d68e6c91ce84 button.colab-df-convert');
+          document.querySelector('#df-fa9a2758-d071-4ad5-ab12-18be21f2fb4e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-174c2e35-b295-4b55-9aa1-d68e6c91ce84');
+          const element = document.querySelector('#df-fa9a2758-d071-4ad5-ab12-18be21f2fb4e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -886,7 +891,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting Sastrawi
   Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 KB</span> <span class=" -Color -Color-Red">8.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 KB</span> <span class=" -Color -Color-Red">6.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -900,16 +905,15 @@ Successfully installed Sastrawi-1.0.1
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting symspellpy
   Downloading symspellpy-6.7.7-py3-none-any.whl (2.6 MB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/2.6 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.0/2.6 MB</span> <span class=" -Color -Color-Red">28.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">2.6/2.6 MB</span> <span class=" -Color -Color-Red">46.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.6/2.6 MB</span> <span class=" -Color -Color-Red">33.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.8/2.6 MB</span> <span class=" -Color -Color-Red">25.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.6/2.6 MB</span> <span class=" -Color -Color-Red">39.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting editdistpy&gt;=0.1.3
   Downloading editdistpy-0.1.3.tar.gz (57 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/57.2 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">57.2/57.2 KB</span> <span class=" -Color -Color-Red">7.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">57.2/57.2 KB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -924,50 +928,95 @@ Building wheels for collected packages: editdistpy
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for editdistpy (pyproject.toml) ... ?25l?25hdone
-  Created wheel for editdistpy: filename=editdistpy-0.1.3-cp39-cp39-linux_x86_64.whl size=141228 sha256=f860e1f2bbe11cc8989994c716ca6c0596d60aab43683676d1a6fdfdc41ad49b
+  Created wheel for editdistpy: filename=editdistpy-0.1.3-cp39-cp39-linux_x86_64.whl size=141206 sha256=e085c75863afce76ad4bc81e15042d91a3afd10aa454dff67f6855871b65ede5
   Stored in directory: /root/.cache/pip/wheels/72/16/b1/ea6472dedd6ac13ad789dd294871a76fd6906fca3c010347d1
 Successfully built editdistpy
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: editdistpy, symspellpy
-Successfully installed editdistpy-0.1.3 symspellpy-6.7.7
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
-  File &quot;/usr/local/bin/pip3&quot;, line 5, in &lt;module&gt;
-    from pip._internal.cli.main import main
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/main.py&quot;, line 9, in &lt;module&gt;
-    from pip._internal.cli.autocompletion import autocomplete
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/autocompletion.py&quot;, line 10, in &lt;module&gt;
-    from pip._internal.cli.main_parser import create_main_parser
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/main_parser.py&quot;, line 8, in &lt;module&gt;
-    from pip._internal.cli import cmdoptions
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/cmdoptions.py&quot;, line 23, in &lt;module&gt;
-    from pip._internal.cli.parser import ConfigOptionParser
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/parser.py&quot;, line 12, in &lt;module&gt;
-    from pip._internal.configuration import Configuration, ConfigurationError
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/configuration.py&quot;, line 26, in &lt;module&gt;
-    from pip._internal.utils.logging import getLogger
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/utils/logging.py&quot;, line 27, in &lt;module&gt;
-    from pip._internal.utils.misc import ensure_dir
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/utils/misc.py&quot;, line 35, in &lt;module&gt;
-    from pip._vendor.tenacity import retry, stop_after_delay, wait_fixed
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/tenacity/__init__.py&quot;, line 514, in &lt;module&gt;
-    from pip._vendor.tenacity._asyncio import AsyncRetrying  # noqa:E402,I100
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/tenacity/_asyncio.py&quot;, line 21, in &lt;module&gt;
-    from asyncio import sleep
-  File &quot;/usr/lib/python3.9/asyncio/__init__.py&quot;, line 8, in &lt;module&gt;
-    from .base_events import *
-  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1007, in _find_and_load
-  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 986, in _find_and_load_unlocked
-  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 680, in _load_unlocked
-  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 846, in exec_module
-  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 978, in get_code
-  File &quot;&lt;frozen importlib._bootstrap_external&gt;&quot;, line 647, in _compile_bytecode
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3021, in _dep_map
+    return self.__dep_map
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2815, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/base_command.py&quot;, line 167, in exc_logging_wrapper
+    status = run_func(*args)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/req_command.py&quot;, line 199, in wrapper
+    return func(self, options, args)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/commands/install.py&quot;, line 397, in run
+    conflicts = self._determine_conflicts(to_install)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/commands/install.py&quot;, line 529, in _determine_conflicts
+    return check_install_conflicts(to_install)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/operations/check.py&quot;, line 101, in check_install_conflicts
+    package_set, _ = create_package_set_from_installed()
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/operations/check.py&quot;, line 42, in create_package_set_from_installed
+    dependencies = list(dist.iter_dependencies())
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/metadata/pkg_resources.py&quot;, line 202, in iter_dependencies
+    return self._dist.requires(extras)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2736, in requires
+    dm = self._dep_map
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3023, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3045, in _compute_dependencies
+    dm[s_extra] = list(frozenset(reqs_for_extra(extra)) - common)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3037, in reqs_for_extra
+    if not req.marker or req.marker.evaluate({&#39;extra&#39;: extra}):
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/packaging/markers.py&quot;, line 300, in evaluate
+    current_environment = default_environment()
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/packaging/markers.py&quot;, line 270, in default_environment
+    &quot;python_version&quot;: &quot;.&quot;.join(platform.python_version_tuple()[:2]),
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/lib/python3.9/logging/__init__.py&quot;, line 1697, in isEnabledFor
+    return self._cache[level]
+KeyError: 50
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
+    sys.exit(main())
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
+    return command.main(cmd_args)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
+    return self._main(args)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/base_command.py&quot;, line 221, in _main
+    return run(options, args)
+  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/base_command.py&quot;, line 204, in exc_logging_wrapper
+    logger.critical(&quot;Operation cancelled by user&quot;)
+  File &quot;/usr/lib/python3.9/logging/__init__.py&quot;, line 1492, in critical
+    if self.isEnabledFor(CRITICAL):
+  File &quot;/usr/lib/python3.9/logging/__init__.py&quot;, line 1701, in isEnabledFor
+    if self.manager.disable &gt;= level:
+  File &quot;/usr/lib/python3.9/logging/__init__.py&quot;, line 1276, in disable
+    @property
 KeyboardInterrupt
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting langdetect
+  Downloading langdetect-1.0.9.tar.gz (981 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/981.5 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">972.8/981.5 KB</span> <span class=" -Color -Color-Red">31.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">981.5/981.5 KB</span> <span class=" -Color -Color-Red">20.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: six in /usr/local/lib/python3.9/dist-packages (from langdetect) (1.16.0)
+Building wheels for collected packages: langdetect
 </pre></div>
 </div>
 </div>
@@ -985,6 +1034,7 @@ KeyboardInterrupt
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">joblib</span>
 </pre></div>
 </div>
 </div>
@@ -1392,7 +1442,7 @@ KeyboardInterrupt
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-94ff3866-f41b-4f7c-bdcc-7a256ba872cd">
+  <div id="df-03b7c655-8ae8-40ef-9db1-9b10afb8ebf1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1500,7 +1550,7 @@ KeyboardInterrupt
 </table>
 <p>805 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-94ff3866-f41b-4f7c-bdcc-7a256ba872cd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-03b7c655-8ae8-40ef-9db1-9b10afb8ebf1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1551,12 +1601,12 @@ KeyboardInterrupt
 
       <script>
         const buttonEl =
-          document.querySelector('#df-94ff3866-f41b-4f7c-bdcc-7a256ba872cd button.colab-df-convert');
+          document.querySelector('#df-03b7c655-8ae8-40ef-9db1-9b10afb8ebf1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-94ff3866-f41b-4f7c-bdcc-7a256ba872cd');
+          const element = document.querySelector('#df-03b7c655-8ae8-40ef-9db1-9b10afb8ebf1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1590,7 +1640,7 @@ KeyboardInterrupt
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f45aae91-7a8e-4cca-9798-d5c20ed2672b">
+  <div id="df-9781f7a2-b40a-452e-b949-22bb1fed337c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1698,7 +1748,7 @@ KeyboardInterrupt
 </table>
 <p>805 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f45aae91-7a8e-4cca-9798-d5c20ed2672b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9781f7a2-b40a-452e-b949-22bb1fed337c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1749,12 +1799,12 @@ KeyboardInterrupt
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f45aae91-7a8e-4cca-9798-d5c20ed2672b button.colab-df-convert');
+          document.querySelector('#df-9781f7a2-b40a-452e-b949-22bb1fed337c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f45aae91-7a8e-4cca-9798-d5c20ed2672b');
+          const element = document.querySelector('#df-9781f7a2-b40a-452e-b949-22bb1fed337c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1799,8 +1849,14 @@ N adalah jumlah total document dalam corpus, N =|D|.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span><span class="p">,</span><span class="n">CountVectorizer</span>
 <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
 <span class="n">countvectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+
 <span class="c1"># hasil fit_transfrom</span>
 <span class="n">X_train_tfidf</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">vectorizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="c1"># save tf-idf</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/prosaindata/model/vectorizer.sav&#39;</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">vectorizer</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
 
 <span class="c1"># menghitung jumlah</span>
 <span class="n">count_wm</span> <span class="o">=</span> <span class="n">countvectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -1989,6 +2045,29 @@ TD-IDF Vectorizer
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      1
+1      1
+2      1
+3      0
+4      1
+      ..
+800    0
+801    0
+802    0
+803    0
+804    0
+Name: Kategori, Length: 805, dtype: int8
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="split-data">
 <h3>Split Data<a class="headerlink" href="#split-data" title="Permalink to this heading">#</a></h3>
@@ -2004,6 +2083,285 @@ TD-IDF Vectorizer
 </div>
 <div class="section" id="eksekusi-ke-model">
 <h2>Eksekusi ke Model<a class="headerlink" href="#eksekusi-ke-model" title="Permalink to this heading">#</a></h2>
+<div class="section" id="k-means-clustering">
+<h3>K-means Clustering<a class="headerlink" href="#k-means-clustering" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="untuk-percobaan-n-component-1-25">
+<h4>Untuk Percobaan n_component =1-25<a class="headerlink" href="#untuk-percobaan-n-component-1-25" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menentukan </span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">):</span>
+  <span class="c1"># Run PCA over the features.</span>
+  <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+  <span class="n">X</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+  <span class="c1"># Number of clusters</span>
+  <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+  <span class="c1"># Fitting the input data</span>
+  <span class="n">kmeans</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+  <span class="c1"># Getting the cluster labels</span>
+  <span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+  <span class="c1"># Centroid values</span>
+  <span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+  <span class="n">hasil</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+  <span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+  <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+/usr/local/lib/python3.9/dist-packages/sklearn/cluster/_kmeans.py:870: FutureWarning: The default value of `n_init` will change from 10 to &#39;auto&#39; in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hasil-akurasi-tertinggi">
+<h4>Hasil Akurasi Tertinggi<a class="headerlink" href="#hasil-akurasi-tertinggi" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">indmax</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">valuemax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hasil Akurasi Tertinggi Dengan n_components = </span><span class="se">\033</span><span class="s1">[1m</span><span class="si">{</span><span class="n">indmax</span><span class="si">}</span><span class="se">\033</span><span class="s1">[0m dengan Akurasi Sebesar </span><span class="se">\033</span><span class="s1">[1m</span><span class="si">{</span><span class="n">valuemax</span><span class="si">}</span><span class="se">\033</span><span class="s1">[0m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Akurasi Tertinggi Dengan n_components = <span class=" -Color -Color-Bold">12</span> dengan Akurasi Sebesar <span class=" -Color -Color-Bold">0.537888198757764</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hasil Akurasi Pada Plot</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">n_com</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">)]</span>
+<span class="c1">#plot the relationship between K and the testing accuracy</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n_com</span><span class="p">,</span><span class="n">scores</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Value of N for N_COMPONENTS&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Testing Accuracy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
+</pre></div>
+</div>
+<img alt="_images/c93fe7875c60848d9723f7ab85d8560faab73af1f419425e5b159539b7d1441c.png" src="_images/c93fe7875c60848d9723f7ab85d8560faab73af1f419425e5b159539b7d1441c.png" />
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="gausian-naive-bayes">
 <h3>Gausian Naive Bayes<a class="headerlink" href="#gausian-naive-bayes" title="Permalink to this heading">#</a></h3>
 <div class="section" id="inisialisasi-libary">
@@ -2020,8 +2378,8 @@ TD-IDF Vectorizer
 </div>
 <p>karena mencari akurasi yang tertinggi dari <code class="docutils literal notranslate"><span class="pre">n_component</span></code> maka akan dilakukan perulangan</p>
 </div>
-<div class="section" id="untuk-percobaan-n-component-1-25">
-<h4>Untuk Percobaan n_component = 1-25<a class="headerlink" href="#untuk-percobaan-n-component-1-25" title="Permalink to this heading">#</a></h4>
+<div class="section" id="id1">
+<h4>Untuk Percobaan n_component = 1-25<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -2052,6 +2410,10 @@ Name: Kategori, dtype: int8
   <span class="c1"># eksekusi ke model</span>
   <span class="n">clf2</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
   <span class="n">clf2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+  <span class="c1"># save model</span>
+  <span class="c1"># save model nb</span>
+  <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/prosaindata/model/gnb&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.pkl&#39;</span>
+  <span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">clf2</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span> 
   <span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
   <span class="n">probas</span> <span class="o">=</span> <span class="n">clf2</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
   <span class="n">probas</span> <span class="o">=</span> <span class="n">probas</span><span class="o">.</span><span class="n">round</span><span class="p">()</span>
@@ -2064,14 +2426,14 @@ Name: Kategori, dtype: int8
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[69.57, 57.76, 68.32, 79.5, 67.7]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[69.57, 57.76, 68.32, 79.5, 66.46]
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="hasil-akurasi-tertinggi">
-<h4>Hasil Akurasi Tertinggi<a class="headerlink" href="#hasil-akurasi-tertinggi" title="Permalink to this heading">#</a></h4>
+<div class="section" id="id2">
+<h4>Hasil Akurasi Tertinggi<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">scores_list.index(max(scores_list))</span> <span class="pre">+</span> <span class="pre">1</span></code>. +1 karena list dimulai dari index 0</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2082,7 +2444,23 @@ Name: Kategori, dtype: int8
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Akurasi Tertinggi Dengan n_components = <span class=" -Color -Color-Bold">4</span> dengan Akurasi Sebesar <span class=" -Color -Color-Bold">79.5</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Akurasi Tertinggi Dengan n_components = <span class=" -Color -Color-Bold">7</span> dengan Akurasi Sebesar <span class=" -Color -Color-Bold">80.12</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Karena Hasil Tersebut Maka yang akan disimpan n_components = 4</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">indmax</span><span class="p">)</span>
+<span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/prosaindata/model/pcanb.sav&#39;</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">pca</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/content/drive/MyDrive/prosaindata/model/pcanb.sav&#39;]
 </pre></div>
 </div>
 </div>
@@ -2106,15 +2484,15 @@ Name: Kategori, dtype: int8
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
 </pre></div>
 </div>
-<img alt="_images/efb3ac0d6e200dd020f6bec22346a361903bd075851693167cb8dd56518070e5.png" src="_images/efb3ac0d6e200dd020f6bec22346a361903bd075851693167cb8dd56518070e5.png" />
+<img alt="_images/e846a4b71588d4c4112a703fa21cd9fd1c14f007a12237e75c4ba52397245b7a.png" src="_images/e846a4b71588d4c4112a703fa21cd9fd1c14f007a12237e75c4ba52397245b7a.png" />
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="k-nearest-neighbor-k-nn">
 <h3>k-Nearest Neighbor (k-NN)<a class="headerlink" href="#k-nearest-neighbor-k-nn" title="Permalink to this heading">#</a></h3>
-<div class="section" id="id1">
-<h4>inisialisasi libary<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<div class="section" id="id3">
+<h4>inisialisasi libary<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import the KNeighborsClassifier class from sklearn</span>
@@ -2144,6 +2522,10 @@ Name: Kategori, dtype: int8
   <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">n_nei</span><span class="p">:</span>
         <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
         <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="c1"># save model</span>
+        <span class="c1"># save model knn        </span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/prosaindata/model/knn&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.pkl&#39;</span>
+        <span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">knn</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span> 
         <span class="n">y_pred</span><span class="o">=</span><span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
         <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">))</span>
 
@@ -2161,38 +2543,38 @@ Name: Kategori, dtype: int8
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.7267080745341615, 17],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.7267080745341615, 13],
  [0.7515527950310559, 25],
  [0.8074534161490683, 9],
  [0.8136645962732919, 9],
- [0.8074534161490683, 5],
+ [0.8136645962732919, 9],
  [0.8385093167701864, 5],
- [0.84472049689441, 5],
- [0.8695652173913043, 1],
- [0.8385093167701864, 21],
+ [0.8509316770186336, 7],
+ [0.8571428571428571, 5],
+ [0.8509316770186336, 19],
  [0.84472049689441, 25],
- [0.84472049689441, 10],
- [0.8385093167701864, 9],
+ [0.8571428571428571, 25],
+ [0.84472049689441, 23],
+ [0.84472049689441, 9],
+ [0.8322981366459627, 3],
+ [0.8509316770186336, 3],
+ [0.8385093167701864, 23],
+ [0.8509316770186336, 9],
  [0.8633540372670807, 7],
- [0.8385093167701864, 17],
- [0.84472049689441, 1],
- [0.8322981366459627, 23],
- [0.8385093167701864, 3],
- [0.8322981366459627, 7],
  [0.8571428571428571, 7],
- [0.8385093167701864, 7],
- [0.8385093167701864, 7],
+ [0.84472049689441, 11],
+ [0.8322981366459627, 7],
+ [0.8260869565217391, 18],
  [0.8198757763975155, 7],
- [0.8260869565217391, 11],
- [0.8385093167701864, 9],
- [0.8322981366459627, 6]]
+ [0.8322981366459627, 7],
+ [0.8385093167701864, 7]]
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="id2">
-<h4>Hasil Akurasi Tertinggi<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<div class="section" id="id4">
+<h4>Hasil Akurasi Tertinggi<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hasil Akurasi Tertinggi Dengan n_components = </span><span class="se">\033</span><span class="s1">[1m</span><span class="si">{</span><span class="n">scores</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span><span class="si">}</span><span class="se">\033</span><span class="s1">[0m dan n_neighbors = </span><span class="se">\033</span><span class="s1">[1m</span><span class="si">{</span><span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="se">\033</span><span class="s1">[0m dengan Akurasi Sebesar </span><span class="se">\033</span><span class="s1">[1m</span><span class="si">{</span><span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\033</span><span class="s1">[0m&#39;</span><span class="p">)</span>
@@ -2200,14 +2582,30 @@ Name: Kategori, dtype: int8
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Akurasi Tertinggi Dengan n_components = <span class=" -Color -Color-Bold">7</span> dan n_neighbors = <span class=" -Color -Color-Bold">1</span> dengan Akurasi Sebesar <span class=" -Color -Color-Bold">0.8695652173913043</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Akurasi Tertinggi Dengan n_components = <span class=" -Color -Color-Bold">17</span> dan n_neighbors = <span class=" -Color -Color-Bold">7</span> dengan Akurasi Sebesar <span class=" -Color -Color-Bold">0.8633540372670807</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Karena hasil tersebut maka n_components = 17 akan disimpan</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">scores</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">)))</span>
+<span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/prosaindata/model/pcaknn.sav&#39;</span>
+<span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">pca</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/content/drive/MyDrive/prosaindata/model/pcaknn.sav&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h4>Hasil Akurasi pada Plot<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<div class="section" id="id5">
+<h4>Hasil Akurasi pada Plot<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n_nei</span><span class="p">,[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">])</span>
@@ -2220,7 +2618,7 @@ Name: Kategori, dtype: int8
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
 </pre></div>
 </div>
-<img alt="_images/1e1f276b1e1e3b36ab403738f4dd93c5d053d0df719b2accd861bd001b5d77e3.png" src="_images/1e1f276b1e1e3b36ab403738f4dd93c5d053d0df719b2accd861bd001b5d77e3.png" />
+<img alt="_images/1b6c4b66a63ac31f287352aca2f66f44e3f4577080c65fed00c6ed9f9670a179.png" src="_images/1b6c4b66a63ac31f287352aca2f66f44e3f4577080c65fed00c6ed9f9670a179.png" />
 </div>
 </div>
 </div>
@@ -2307,18 +2705,23 @@ Name: Kategori, dtype: int8
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eksekusi-ke-model">Eksekusi ke Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-clustering">K-means Clustering</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-percobaan-n-component-1-25">Untuk Percobaan n_component =1-25</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akurasi-tertinggi">Hasil Akurasi Tertinggi</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gausian-naive-bayes">Gausian Naive Bayes</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-libary">inisialisasi libary</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-percobaan-n-component-1-25">Untuk Percobaan n_component = 1-25</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akurasi-tertinggi">Hasil Akurasi Tertinggi</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Untuk Percobaan n_component = 1-25</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hasil Akurasi Tertinggi</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akurasi-pada-plot">Hasil Akurasi Pada Plot</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbor-k-nn">k-Nearest Neighbor (k-NN)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">inisialisasi libary</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">inisialisasi libary</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-percobaan-n-component-1-25-dan-n-neigboars-1-25">Untuk Percobaan n_component 1-25 dan n_neigboars 1-25</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hasil Akurasi Tertinggi</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Hasil Akurasi pada Plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Hasil Akurasi Tertinggi</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Hasil Akurasi pada Plot</a></li>
 </ul>
 </li>
 </ul>
