@@ -64,6 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/y.jpg"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tugas 7 | PageRank NetworkX" href="Untitled5.html" />
     <link rel="prev" title="Tugas 6 | TimeSeries Dataset airline-passengers" href="Untitled3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -170,6 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Untitled2.html"><strong>Tugas 5 | Pipelines With PCA</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Untitled3.html"><strong>Tugas 6 | TimeSeries Dataset airline-passengers</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>UTS | Data (https://pta.trunojoyo.ac.id/) TF-IDF</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled5.html">Tugas 7 | PageRank NetworkX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled6.html">Tugas 8 | Extractive Summarizer</a></li>
 </ul>
 
     </div>
@@ -466,7 +469,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7837f498-0f91-42ca-9e52-bb0d6d1c3265">
+  <div id="df-61c306fd-7acd-49e3-8fd7-aae50b456bec">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -598,7 +601,7 @@ document.write(`
 </table>
 <p>860 rows × 6 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7837f498-0f91-42ca-9e52-bb0d6d1c3265')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-61c306fd-7acd-49e3-8fd7-aae50b456bec')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -649,12 +652,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7837f498-0f91-42ca-9e52-bb0d6d1c3265 button.colab-df-convert');
+          document.querySelector('#df-61c306fd-7acd-49e3-8fd7-aae50b456bec button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7837f498-0f91-42ca-9e52-bb0d6d1c3265');
+          const element = document.querySelector('#df-61c306fd-7acd-49e3-8fd7-aae50b456bec');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -685,7 +688,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fa9a2758-d071-4ad5-ab12-18be21f2fb4e">
+  <div id="df-5ac7a4ef-e3f7-4b72-b28b-77c3864b14ac">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -781,7 +784,7 @@ document.write(`
 </table>
 <p>805 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fa9a2758-d071-4ad5-ab12-18be21f2fb4e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5ac7a4ef-e3f7-4b72-b28b-77c3864b14ac')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -832,12 +835,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fa9a2758-d071-4ad5-ab12-18be21f2fb4e button.colab-df-convert');
+          document.querySelector('#df-5ac7a4ef-e3f7-4b72-b28b-77c3864b14ac button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fa9a2758-d071-4ad5-ab12-18be21f2fb4e');
+          const element = document.querySelector('#df-5ac7a4ef-e3f7-4b72-b28b-77c3864b14ac');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -890,8 +893,9 @@ document.write(`
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting Sastrawi
   Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 KB</span> <span class=" -Color -Color-Red">6.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/209.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ <span class=" -Color -Color-Green">204.8/209.7 kB</span> <span class=" -Color -Color-Red">7.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -900,20 +904,21 @@ Successfully installed Sastrawi-1.0.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting symspellpy
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting symspellpy
-  Downloading symspellpy-6.7.7-py3-none-any.whl (2.6 MB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading symspellpy-6.7.7-py3-none-any.whl (2.6 MB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/2.6 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.8/2.6 MB</span> <span class=" -Color -Color-Red">25.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.6/2.6 MB</span> <span class=" -Color -Color-Red">39.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.3/2.6 MB</span> <span class=" -Color -Color-Red">8.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ <span class=" -Color -Color-Green">2.0/2.6 MB</span> <span class=" -Color -Color-Red">29.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.6/2.6 MB</span> <span class=" -Color -Color-Red">27.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting editdistpy&gt;=0.1.3
   Downloading editdistpy-0.1.3.tar.gz (57 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/57.2 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">57.2/57.2 KB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/57.2 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">57.2/57.2 kB</span> <span class=" -Color -Color-Red">5.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -928,79 +933,15 @@ Building wheels for collected packages: editdistpy
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for editdistpy (pyproject.toml) ... ?25l?25hdone
-  Created wheel for editdistpy: filename=editdistpy-0.1.3-cp39-cp39-linux_x86_64.whl size=141206 sha256=e085c75863afce76ad4bc81e15042d91a3afd10aa454dff67f6855871b65ede5
+  Created wheel for editdistpy: filename=editdistpy-0.1.3-cp39-cp39-linux_x86_64.whl size=141217 sha256=7d92362348de711c6f4b2cf5af5494b198942d3901e9599933e261b1dc2e6c00
   Stored in directory: /root/.cache/pip/wheels/72/16/b1/ea6472dedd6ac13ad789dd294871a76fd6906fca3c010347d1
 Successfully built editdistpy
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3021, in _dep_map
-    return self.__dep_map
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2815, in __getattr__
-    raise AttributeError(attr)
-AttributeError: _DistInfoDistribution__dep_map
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/base_command.py&quot;, line 167, in exc_logging_wrapper
-    status = run_func(*args)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/req_command.py&quot;, line 199, in wrapper
-    return func(self, options, args)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/commands/install.py&quot;, line 397, in run
-    conflicts = self._determine_conflicts(to_install)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/commands/install.py&quot;, line 529, in _determine_conflicts
-    return check_install_conflicts(to_install)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/operations/check.py&quot;, line 101, in check_install_conflicts
-    package_set, _ = create_package_set_from_installed()
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/operations/check.py&quot;, line 42, in create_package_set_from_installed
-    dependencies = list(dist.iter_dependencies())
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/metadata/pkg_resources.py&quot;, line 202, in iter_dependencies
-    return self._dist.requires(extras)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2736, in requires
-    dm = self._dep_map
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3023, in _dep_map
-    self.__dep_map = self._compute_dependencies()
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3045, in _compute_dependencies
-    dm[s_extra] = list(frozenset(reqs_for_extra(extra)) - common)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3037, in reqs_for_extra
-    if not req.marker or req.marker.evaluate({&#39;extra&#39;: extra}):
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/packaging/markers.py&quot;, line 300, in evaluate
-    current_environment = default_environment()
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_vendor/packaging/markers.py&quot;, line 270, in default_environment
-    &quot;python_version&quot;: &quot;.&quot;.join(platform.python_version_tuple()[:2]),
-KeyboardInterrupt
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/usr/lib/python3.9/logging/__init__.py&quot;, line 1697, in isEnabledFor
-    return self._cache[level]
-KeyError: 50
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/main.py&quot;, line 70, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/base_command.py&quot;, line 221, in _main
-    return run(options, args)
-  File &quot;/usr/local/lib/python3.9/dist-packages/pip/_internal/cli/base_command.py&quot;, line 204, in exc_logging_wrapper
-    logger.critical(&quot;Operation cancelled by user&quot;)
-  File &quot;/usr/lib/python3.9/logging/__init__.py&quot;, line 1492, in critical
-    if self.isEnabledFor(CRITICAL):
-  File &quot;/usr/lib/python3.9/logging/__init__.py&quot;, line 1701, in isEnabledFor
-    if self.manager.disable &gt;= level:
-  File &quot;/usr/lib/python3.9/logging/__init__.py&quot;, line 1276, in disable
-    @property
-KeyboardInterrupt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: editdistpy, symspellpy
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed editdistpy-0.1.3 symspellpy-6.7.7
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
@@ -1008,15 +949,25 @@ KeyboardInterrupt
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting langdetect
   Downloading langdetect-1.0.9.tar.gz (981 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/981.5 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">972.8/981.5 KB</span> <span class=" -Color -Color-Red">31.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">981.5/981.5 KB</span> <span class=" -Color -Color-Red">20.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/981.5 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">256.0/981.5 kB</span> <span class=" -Color -Color-Red">7.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">981.5/981.5 kB</span> <span class=" -Color -Color-Red">14.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
 Requirement already satisfied: six in /usr/local/lib/python3.9/dist-packages (from langdetect) (1.16.0)
 Building wheels for collected packages: langdetect
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for langdetect (setup.py) ... ?25l?25hdone
+  Created wheel for langdetect: filename=langdetect-1.0.9-py3-none-any.whl size=993243 sha256=fb4aacea1c31df86fccd7c8cbe793aaffad806fe8a928264dddd53d300d69129
+  Stored in directory: /root/.cache/pip/wheels/d1/c1/d9/7e068de779d863bc8f8fc9467d85e25cfe47fa5051fff1a1bb
+Successfully built langdetect
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
+
 </pre></div>
 </div>
 </div>
@@ -2665,6 +2616,15 @@ Name: Kategori, dtype: int8
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><strong>Tugas 6 | TimeSeries Dataset airline-passengers</strong></p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Untitled5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tugas 7 | PageRank NetworkX</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   

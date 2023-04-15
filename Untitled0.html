@@ -171,6 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Untitled2.html"><strong>Tugas 5 | Pipelines With PCA</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Untitled3.html"><strong>Tugas 6 | TimeSeries Dataset airline-passengers</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Untitled4.html"><strong>UTS | Data (https://pta.trunojoyo.ac.id/) TF-IDF</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled5.html">Tugas 7 | PageRank NetworkX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled6.html">Tugas 8 | Extractive Summarizer</a></li>
 </ul>
 
     </div>
@@ -422,21 +424,21 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting snscrape
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
-  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 KB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 KB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading snscrape-0.6.2.20230320-py3-none-any.whl (71 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/71.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">71.8/71.8 kB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.11.0)
 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.9/dist-packages (from snscrape) (2.27.1)
-Requirement already satisfied: filelock in /usr/local/lib/python3.9/dist-packages (from snscrape) (3.10.7)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.11.2)
 Requirement already satisfied: lxml in /usr/local/lib/python3.9/dist-packages (from snscrape) (4.9.2)
 Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.9/dist-packages (from beautifulsoup4-&gt;snscrape) (2.4)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2.0.12)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.26.15)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.9/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
@@ -502,30 +504,30 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Date             User  \
-0   2023-04-06 03:35:10+00:00   Andrelovesabah   
-1   2023-04-06 03:35:02+00:00      fajaronline   
-2   2023-04-06 03:34:48+00:00      husainia431   
-3   2023-04-06 03:34:09+00:00     SahabatSaber   
-4   2023-04-06 03:34:03+00:00          nasrlhs   
+0   2023-04-15 17:37:38+00:00  KusumaW57427580   
+1   2023-04-15 17:37:24+00:00    ShafaraIndira   
+2   2023-04-15 17:37:22+00:00         b_geffye   
+3   2023-04-15 17:35:22+00:00  KusumaW57427580   
+4   2023-04-15 17:35:09+00:00  KusumaW57427580   
 ..                        ...              ...   
-495 2023-04-05 21:06:49+00:00    gundogan20231   
-496 2023-04-05 21:06:10+00:00  dwi_irawansanto   
-497 2023-04-05 21:05:08+00:00         BudTeguh   
-498 2023-04-05 21:04:48+00:00  ShevchenmailovM   
-499 2023-04-05 21:04:06+00:00           virza1   
+495 2023-04-15 10:56:27+00:00          adri_7i   
+496 2023-04-15 10:55:57+00:00     jazz66562656   
+497 2023-04-15 10:54:52+00:00    qadroenphobia   
+498 2023-04-15 10:53:23+00:00    qadroenphobia   
+499 2023-04-15 10:52:26+00:00    qadroenphobia   
 
                                                  Tweet  
-0    @STresnowat1 @aniesbaswedan Sudah tahun politi...  
-1    PDIP Singgung Anies Soal Pencabutan Status Ind...  
-2    Tolak kampanye terselubung Anies Baswedan!\n\n...  
-3    @OmDickyajah Kapal Kandas..\nItulah motif bati...  
-4    @YRadianto Siap bos,karna itu mari kita gaungk...  
+0    @Wiens_Dede @bung_madin @agussusilo43026 @NasD...  
+1    Amien menyatakan, sepakat bakal mendukung Prab...  
+2    Amien Rais dan Partai Ummat Sepakat Dukung Pra...  
+3    @Wiens_Dede @bung_madin @agussusilo43026 @NasD...  
+4    @Wiens_Dede @bung_madin @agussusilo43026 @NasD...  
 ..                                                 ...  
-495  @bung_madin @jagad_bentala @aniesbaswedan @PKS...  
-496  @YanHarahap @PDemokrat @aniesbaswedan @AgusYud...  
-497                          @virza1 @aniesbaswedan 😁🤭  
-498  @L3OF14N @Metro_TV @aniesbaswedan Ih situ Klo ...  
-499           @BudTeguh @aniesbaswedan Primordial beut  
+495  @SimbokeSarah @Siantar72 @NKRI_jokowisyoo @ain...  
+496  @ch_chotimah2 @aniesbaswedan @ganjarpranowo Bu...  
+497  @rifin_are @islah_bahrawi @humaspoldalpg @Komi...  
+498  @bangdoelaje @Faraz_kepri @islah_bahrawi @huma...  
+499  @CebongMusuh @Faraz_kepri @islah_bahrawi @huma...  
 
 [500 rows x 3 columns]
 </pre></div>
