@@ -32,8 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-!pip install Sastrawi
-!pip install symspellpy
-!pip install langdetect
+['# menentukan ', 'scores = []', 'for i in range(1,51):', '  # Run PCA over the features.', '  pca = PCA(n_components=i)']
+...
+['  # Centroid values', '  centroids = kmeans.cluster_centers_', '  hasil = kmeans.fit_transform(X)', '  acc = accuracy_score(y, labels)', '  scores.append(acc)']
 -------------------
 

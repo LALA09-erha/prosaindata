@@ -170,8 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Untitled2.html"><strong>Tugas 5 | Pipelines With PCA</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Untitled3.html"><strong>Tugas 6 | TimeSeries Dataset airline-passengers</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Untitled4.html"><strong>UTS | Data (https://pta.trunojoyo.ac.id/) TF-IDF</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Untitled5.html">Tugas 7 | PageRank NetworkX</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 8 | Extractive Summarizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled5.html"><strong>Tugas 7 | PageRank NetworkX</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 8 | Extractive Summarizer</strong></a></li>
 </ul>
 
     </div>
@@ -419,7 +419,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="tugas-8-extractive-summarizer">
-<h1>Tugas 8 | Extractive Summarizer<a class="headerlink" href="#tugas-8-extractive-summarizer" title="Permalink to this heading">#</a></h1>
+<h1><strong>Tugas 8 | Extractive Summarizer</strong><a class="headerlink" href="#tugas-8-extractive-summarizer" title="Permalink to this heading">#</a></h1>
 <div class="section" id="text-summarization">
 <h2>Text Summarization<a class="headerlink" href="#text-summarization" title="Permalink to this heading">#</a></h2>
 <p>Peringkasan teks ekstraktif adalah tentang menemukan kalimat yang lebih penting dari suatu dokumen sebagai ringkasan dari dokumen itu. Pendekatan kami menggunakan algoritma TextRank untuk menemukan kalimat <code class="docutils literal notranslate"><span class="pre">'penting'</span></code> ini.</p>
@@ -436,43 +436,12 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting PyPDF2
-  Downloading pypdf2-3.0.1-py3-none-any.whl (232 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/232.6 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━ <span class=" -Color -Color-Green">225.3/232.6 kB</span> <span class=" -Color -Color-Red">7.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">232.6/232.6 kB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: typing_extensions&gt;=3.10.0.0 in /usr/local/lib/python3.9/dist-packages (from PyPDF2) (4.5.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: PyPDF2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed PyPDF2-3.0.1
+Requirement already satisfied: PyPDF2 in /usr/local/lib/python3.9/dist-packages (3.0.1)
+Requirement already satisfied: typing_extensions&gt;=3.10.0.0 in /usr/local/lib/python3.9/dist-packages (from PyPDF2) (4.5.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting docx2txt
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading docx2txt-0.8.tar.gz (2.8 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
-Building wheels for collected packages: docx2txt
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for docx2txt (setup.py) ... ?25l?25hdone
-  Created wheel for docx2txt: filename=docx2txt-0.8-py3-none-any.whl size=3977 sha256=a9e66b579d79d14b7c61b1151c3d3085ffd8f3118ef70c3ed8750fd90096eb69
-  Stored in directory: /root/.cache/pip/wheels/40/75/01/e6c444034338bde9c7947d3467807f889123465c2371e77418
-Successfully built docx2txt
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: docx2txt
-Successfully installed docx2txt-0.8
+Requirement already satisfied: docx2txt in /usr/local/lib/python3.9/dist-packages (0.8)
 </pre></div>
 </div>
 </div>
@@ -577,9 +546,7 @@ Successfully installed docx2txt-0.8
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You have asked for the document t.txt
 1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The length of the file is: 7099
+The length of the file is: 7099
 </pre></div>
 </div>
 </div>
@@ -1153,7 +1120,7 @@ hoped that he had forgotten his anger by then.
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas 7 | PageRank NetworkX</p>
+        <p class="prev-next-title"><strong>Tugas 7 | PageRank NetworkX</strong></p>
       </div>
     </a>
 </div></div>
