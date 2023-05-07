@@ -1,0 +1,1587 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 9 | Topic Modelling &#8212; Fikri Ainun Najib</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Untitled7';</script>
+    <link rel="shortcut icon" href="_static/y.jpg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tugas 8 | Extractive Summarizer" href="Untitled6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/x.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/x.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Task</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Untitled0.html"><strong>Tugas 1 | Crawling Twitter with snscrape</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks2.html"><strong>Tugas 2 | Web Scraping (https://pta.trunojoyo.ac.id/)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks3.html"><strong>Tugas 3 | Web Scraping (https://www.tribunnews.com/)</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled1.html"><strong>Tugas 4 | Pipelines</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled2.html"><strong>Tugas 5 | Pipelines With PCA</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled3.html"><strong>Tugas 6 | TimeSeries Dataset airline-passengers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled4.html"><strong>UTS | Data (https://pta.trunojoyo.ac.id/) TF-IDF</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled5.html"><strong>Tugas 7 | PageRank NetworkX</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Untitled6.html"><strong>Tugas 8 | Extractive Summarizer</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 9 | Topic Modelling</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/LALA09-erha/prosaindata/blob/gh-pages/_sources/Untitled7.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/LALA09-erha/prosaindata" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/LALA09-erha/prosaindata/issues/new?title=Issue%20on%20page%20%2FUntitled7.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Untitled7.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tugas 9 | Topic Modelling</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengambilan-data-comments-youtube">Pengambilan Data (Comments Youtube)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprosessing-data">Preprosessing Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seleksi-column">Seleksi Column</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenisasi-data">Tokenisasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-stopword-dengan-sastrawi">Menghapus StopWord dengan sastrawi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-menjadi-lower-case-dan-memeriksa-spesial-char">Mengubah menjadi lower case dan Memeriksa Spesial char</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-angka">Menghapus Angka</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-wkwk">Menghapus Wkwk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-whitespase-karakter-kosong">Menghapus Whitespase (Karakter Kosong)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spell-checker">SPELL checker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming-kata-dengan-sastrawi">Stemming Kata Dengan Sastrawi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-to-csv-data-preprosessing">Save To CSV data preprosessing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-data-preprosessing">Mengambil data Preprosessing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-ke-tf-idf">Implementasi ke TF-IDF</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekseksi-perform-svd">Ekseksi Perform SVD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-topics-and-terms">Extract topics and terms</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="tugas-9-topic-modelling">
+<h1><strong>Tugas 9 | Topic Modelling</strong><a class="headerlink" href="#tugas-9-topic-modelling" title="Permalink to this heading">#</a></h1>
+<p>Menginstall Libary yang dibutuhkan pada saat proses preprosessing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>google-api-python-client
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>Sastrawi
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>symspellpy
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>langdetect
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: google-api-python-client in /usr/local/lib/python3.10/dist-packages (2.84.0)
+Requirement already satisfied: google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0dev,&gt;=1.31.5 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (2.11.0)
+Requirement already satisfied: google-auth-httplib2&gt;=0.1.0 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (0.1.0)
+Requirement already satisfied: google-auth&lt;3.0.0dev,&gt;=1.19.0 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (2.17.3)
+Requirement already satisfied: uritemplate&lt;5,&gt;=3.0.1 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (4.1.1)
+Requirement already satisfied: httplib2&lt;1dev,&gt;=0.15.0 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (0.21.0)
+Requirement already satisfied: googleapis-common-protos&lt;2.0dev,&gt;=1.56.2 in /usr/local/lib/python3.10/dist-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0dev,&gt;=1.31.5-&gt;google-api-python-client) (1.59.0)
+Requirement already satisfied: requests&lt;3.0.0dev,&gt;=2.18.0 in /usr/local/lib/python3.10/dist-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0dev,&gt;=1.31.5-&gt;google-api-python-client) (2.27.1)
+Requirement already satisfied: protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,&lt;5.0.0dev,&gt;=3.19.5 in /usr/local/lib/python3.10/dist-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0dev,&gt;=1.31.5-&gt;google-api-python-client) (3.20.3)
+Requirement already satisfied: cachetools&lt;6.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3.0.0dev,&gt;=1.19.0-&gt;google-api-python-client) (5.3.0)
+Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3.0.0dev,&gt;=1.19.0-&gt;google-api-python-client) (0.3.0)
+Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3.0.0dev,&gt;=1.19.0-&gt;google-api-python-client) (4.9)
+Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3.0.0dev,&gt;=1.19.0-&gt;google-api-python-client) (1.16.0)
+Requirement already satisfied: pyparsing!=3.0.0,!=3.0.1,!=3.0.2,!=3.0.3,&lt;4,&gt;=2.4.2 in /usr/local/lib/python3.10/dist-packages (from httplib2&lt;1dev,&gt;=0.15.0-&gt;google-api-python-client) (3.0.9)
+Requirement already satisfied: pyasn1&lt;0.6.0,&gt;=0.4.6 in /usr/local/lib/python3.10/dist-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3.0.0dev,&gt;=1.19.0-&gt;google-api-python-client) (0.5.0)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3.0.0dev,&gt;=2.18.0-&gt;google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0dev,&gt;=1.31.5-&gt;google-api-python-client) (1.26.15)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3.0.0dev,&gt;=2.18.0-&gt;google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0dev,&gt;=1.31.5-&gt;google-api-python-client) (2022.12.7)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3.0.0dev,&gt;=2.18.0-&gt;google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0dev,&gt;=1.31.5-&gt;google-api-python-client) (3.4)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3.0.0dev,&gt;=2.18.0-&gt;google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0dev,&gt;=1.31.5-&gt;google-api-python-client) (2.0.12)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: Sastrawi in /usr/local/lib/python3.10/dist-packages (1.0.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: symspellpy in /usr/local/lib/python3.10/dist-packages (6.7.7)
+Requirement already satisfied: editdistpy&gt;=0.1.3 in /usr/local/lib/python3.10/dist-packages (from symspellpy) (0.1.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting langdetect
+  Using cached langdetect-1.0.9-py3-none-any.whl
+Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from langdetect) (1.16.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: langdetect
+Successfully installed langdetect-1.0.9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pengambilan-data-comments-youtube">
+<h2>Pengambilan Data (Comments Youtube)<a class="headerlink" href="#pengambilan-data-comments-youtube" title="Permalink to this heading">#</a></h2>
+<p>Berikut Link video youtube yang akan di crawling komentarnya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://www.youtube.com/watch?v=_HwJW5f5jFQ</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Berikut libary-libary yang digunakan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">apiclient</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.StopWordRemover.StopWordRemoverFactory</span> <span class="kn">import</span> <span class="n">StopWordRemoverFactory</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">from</span> <span class="nn">symspellpy</span> <span class="kn">import</span> <span class="n">SymSpell</span> <span class="p">,</span><span class="n">Verbosity</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">joblib</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Proses Pengambilan data Comments Youtube</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;AIzaSyBGoaEoYdlPsBVvPKX8t_ZDqpD_8foCF2c&#39;</span>
+<span class="n">youtube</span> <span class="o">=</span> <span class="n">apiclient</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="s1">&#39;Youtube&#39;</span><span class="p">,</span> <span class="s1">&#39;v3&#39;</span><span class="p">,</span> <span class="n">developerKey</span><span class="o">=</span><span class="n">KEY</span><span class="p">,</span><span class="n">static_discovery</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">video_id</span> <span class="o">=</span> <span class="s1">&#39;_HwJW5f5jFQ&#39;</span>
+<span class="n">full</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">youtube</span><span class="o">.</span><span class="n">commentThreads</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span>
+    <span class="n">part</span><span class="o">=</span><span class="s2">&quot;snippet,replies&quot;</span><span class="p">,</span>
+    <span class="n">videoId</span><span class="o">=</span><span class="n">video_id</span><span class="p">,</span>
+    <span class="n">textFormat</span><span class="o">=</span><span class="s2">&quot;plainText&quot;</span><span class="p">,</span>
+    <span class="n">maxResults</span><span class="o">=</span><span class="mi">100</span>
+  <span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="n">full</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]:</span>
+    <span class="c1"># print(data[&#39;snippet&#39;][&#39;topLevelComment&#39;][&#39;snippet&#39;])</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="o">!=</span><span class="mi">1000</span><span class="p">):</span>
+      <span class="k">if</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;textDisplay&#39;</span><span class="p">],</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;authorDisplayName&#39;</span><span class="p">]]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">):</span>
+        <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;textDisplay&#39;</span><span class="p">],</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;authorDisplayName&#39;</span><span class="p">]])</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">full</span> <span class="o">=</span><span class="kc">False</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="s1">&#39;nextPageToken&#39;</span> <span class="ow">in</span> <span class="n">results</span><span class="p">):</span>
+      <span class="n">new_data</span> <span class="o">=</span> <span class="n">youtube</span><span class="o">.</span><span class="n">commentThreads</span><span class="p">()</span><span class="o">.</span><span class="n">list</span><span class="p">(</span>
+      <span class="n">part</span><span class="o">=</span><span class="s2">&quot;snippet,replies&quot;</span><span class="p">,</span>
+      <span class="n">maxResults</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+      <span class="n">videoId</span><span class="o">=</span><span class="n">video_id</span><span class="p">,</span>
+      <span class="n">textFormat</span><span class="o">=</span><span class="s2">&quot;plainText&quot;</span><span class="p">,</span>
+      <span class="n">pageToken</span><span class="o">=</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;nextPageToken&#39;</span><span class="p">]</span>
+      <span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+      
+      <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">new_data</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]:</span>
+        <span class="c1"># print(data[&#39;snippet&#39;][&#39;topLevelComment&#39;][&#39;snippet&#39;])</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="o">!=</span><span class="mi">1000</span><span class="p">):</span>
+          <span class="k">if</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;textDisplay&#39;</span><span class="p">],</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;authorDisplayName&#39;</span><span class="p">]]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">):</span>
+            <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;publishedAt&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;textDisplay&#39;</span><span class="p">],</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;topLevelComment&#39;</span><span class="p">][</span><span class="s1">&#39;snippet&#39;</span><span class="p">][</span><span class="s1">&#39;authorDisplayName&#39;</span><span class="p">]])</span>
+        <span class="k">else</span><span class="p">:</span>
+          <span class="n">full</span> <span class="o">=</span><span class="kc">False</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="n">new_data</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1000
+</pre></div>
+</div>
+</div>
+</div>
+<p>SAVE TO CSV</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># path = &quot;/content/drive/MyDrive/prosaindata/DataCrawling/comments_youtube.csv&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;Tanggal&#39;</span><span class="p">,</span><span class="s1">&#39;Komentar&#39;</span><span class="p">,</span><span class="s1">&#39;Username&#39;</span><span class="p">])</span>
+
+<span class="c1"># # save to csv</span>
+<span class="c1"># if( os.path.exists(path) == True):</span>
+<span class="c1">#     os.remove(path)</span>
+<span class="c1"># df.to_csv(path)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="preprosessing-data">
+<h2>Preprosessing Data<a class="headerlink" href="#preprosessing-data" title="Permalink to this heading">#</a></h2>
+<p>Pada Preprosessing data terdapat beberapa langkah,berikut langkah-langkah pada proses preprosessing</p>
+<ul class="simple">
+<li><p>tokenisasi data</p></li>
+<li><p>menghapus stopword</p></li>
+<li><p>mengubah menjadi lowercase dan menghapus spesial char</p></li>
+<li><p>menghapus angka</p></li>
+<li><p>menghapus whitespace</p></li>
+<li><p>spell checker</p></li>
+<li><p>stemming</p></li>
+<li><p>Implementasi ke TF-IDF</p></li>
+<li><p>Ekseksi Perform SVD (Singular Value Decomposition)</p></li>
+</ul>
+<div class="section" id="seleksi-column">
+<h3>Seleksi Column<a class="headerlink" href="#seleksi-column" title="Permalink to this heading">#</a></h3>
+<p>Mengambil Coloumn yang dibutuhkan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data = df[&#39;Komentar&#39;].tolist()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># predata = data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tokenisasi-data">
+<h3>Tokenisasi Data<a class="headerlink" href="#tokenisasi-data" title="Permalink to this heading">#</a></h3>
+<p>menjadikan 1 kalimat menjadi per kata dalam bentuk list</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:</span>
+<span class="c1">#   predata[predata.index(i)] = i.split()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="menghapus-stopword-dengan-sastrawi">
+<h3>Menghapus StopWord dengan sastrawi<a class="headerlink" href="#menghapus-stopword-dengan-sastrawi" title="Permalink to this heading">#</a></h3>
+<p>Berikut Kata-kata yang akan dihapus</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factory</span> <span class="o">=</span> <span class="n">StopWordRemoverFactory</span><span class="p">()</span>
+<span class="n">more_stopword</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dengan&#39;</span><span class="p">,</span> <span class="s1">&#39;ia&#39;</span><span class="p">,</span><span class="s1">&#39;bahwa&#39;</span><span class="p">,</span><span class="s1">&#39;oleh&#39;</span><span class="p">,</span><span class="s1">&#39;wkwkwk&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">factory</span><span class="o">.</span><span class="n">get_stop_words</span><span class="p">()</span><span class="o">+</span><span class="n">more_stopword</span><span class="p">)</span>
+<span class="n">stopwords</span> <span class="o">=</span>  <span class="n">factory</span><span class="o">.</span><span class="n">create_stop_word_remover</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;yang&#39;, &#39;untuk&#39;, &#39;pada&#39;, &#39;ke&#39;, &#39;para&#39;, &#39;namun&#39;, &#39;menurut&#39;, &#39;antara&#39;, &#39;dia&#39;, &#39;dua&#39;, &#39;ia&#39;, &#39;seperti&#39;, &#39;jika&#39;, &#39;jika&#39;, &#39;sehingga&#39;, &#39;kembali&#39;, &#39;dan&#39;, &#39;tidak&#39;, &#39;ini&#39;, &#39;karena&#39;, &#39;kepada&#39;, &#39;oleh&#39;, &#39;saat&#39;, &#39;harus&#39;, &#39;sementara&#39;, &#39;setelah&#39;, &#39;belum&#39;, &#39;kami&#39;, &#39;sekitar&#39;, &#39;bagi&#39;, &#39;serta&#39;, &#39;di&#39;, &#39;dari&#39;, &#39;telah&#39;, &#39;sebagai&#39;, &#39;masih&#39;, &#39;hal&#39;, &#39;ketika&#39;, &#39;adalah&#39;, &#39;itu&#39;, &#39;dalam&#39;, &#39;bisa&#39;, &#39;bahwa&#39;, &#39;atau&#39;, &#39;hanya&#39;, &#39;kita&#39;, &#39;dengan&#39;, &#39;akan&#39;, &#39;juga&#39;, &#39;ada&#39;, &#39;mereka&#39;, &#39;sudah&#39;, &#39;saya&#39;, &#39;terhadap&#39;, &#39;secara&#39;, &#39;agar&#39;, &#39;lain&#39;, &#39;anda&#39;, &#39;begitu&#39;, &#39;mengapa&#39;, &#39;kenapa&#39;, &#39;yaitu&#39;, &#39;yakni&#39;, &#39;daripada&#39;, &#39;itulah&#39;, &#39;lagi&#39;, &#39;maka&#39;, &#39;tentang&#39;, &#39;demi&#39;, &#39;dimana&#39;, &#39;kemana&#39;, &#39;pula&#39;, &#39;sambil&#39;, &#39;sebelum&#39;, &#39;sesudah&#39;, &#39;supaya&#39;, &#39;guna&#39;, &#39;kah&#39;, &#39;pun&#39;, &#39;sampai&#39;, &#39;sedangkan&#39;, &#39;selagi&#39;, &#39;sementara&#39;, &#39;tetapi&#39;, &#39;apakah&#39;, &#39;kecuali&#39;, &#39;sebab&#39;, &#39;selain&#39;, &#39;seolah&#39;, &#39;seraya&#39;, &#39;seterusnya&#39;, &#39;tanpa&#39;, &#39;agak&#39;, &#39;boleh&#39;, &#39;dapat&#39;, &#39;dsb&#39;, &#39;dst&#39;, &#39;dll&#39;, &#39;dahulu&#39;, &#39;dulunya&#39;, &#39;anu&#39;, &#39;demikian&#39;, &#39;tapi&#39;, &#39;ingin&#39;, &#39;juga&#39;, &#39;nggak&#39;, &#39;mari&#39;, &#39;nanti&#39;, &#39;melainkan&#39;, &#39;oh&#39;, &#39;ok&#39;, &#39;seharusnya&#39;, &#39;sebetulnya&#39;, &#39;setiap&#39;, &#39;setidaknya&#39;, &#39;sesuatu&#39;, &#39;pasti&#39;, &#39;saja&#39;, &#39;toh&#39;, &#39;ya&#39;, &#39;walau&#39;, &#39;tolong&#39;, &#39;tentu&#39;, &#39;amat&#39;, &#39;apalagi&#39;, &#39;bagaimanapun&#39;, &#39;dengan&#39;, &#39;ia&#39;, &#39;bahwa&#39;, &#39;oleh&#39;, &#39;wkwkwk&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Proses Penghapusan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:</span>
+<span class="c1">#   for j in i:</span>
+<span class="c1">#     predata[predata.index(i)][i.index(j)] = stopwords.remove(j)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mengubah-menjadi-lower-case-dan-memeriksa-spesial-char">
+<h3>Mengubah menjadi lower case dan Memeriksa Spesial char<a class="headerlink" href="#mengubah-menjadi-lower-case-dan-memeriksa-spesial-char" title="Permalink to this heading">#</a></h3>
+<p>Menghilangkan karakter atau simbol pada text, seperti [!”#$%&amp;’()*+,./:;&lt;=&gt;?&#64;[]^_’{|}~]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># punctuation = &quot;!@#$%^&amp;*()/\-[]=_+&lt;&gt;?:.,;&quot; </span>
+<span class="c1"># for i in predata:</span>
+<span class="c1">#   for j in i:</span>
+<span class="c1">#     predata[predata.index(i)][i.index(j)] = j.translate(str.maketrans(&quot;&quot;,&quot;&quot;,punctuation)).lower()</span>
+  
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="menghapus-angka">
+<h3>Menghapus Angka<a class="headerlink" href="#menghapus-angka" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:</span>
+<span class="c1">#   for j in i:</span>
+<span class="c1">#     predata[predata.index(i)][i.index(j)] = j.translate(str.maketrans(&quot;&quot;,&quot;&quot;,string.digits))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="menghapus-wkwk">
+<h3>Menghapus Wkwk<a class="headerlink" href="#menghapus-wkwk" title="Permalink to this heading">#</a></h3>
+<p>Banyak sekali kata <code class="docutils literal notranslate"><span class="pre">wkwkw</span></code> yang berarti mengekspresikan tertawa maka akan dihapus karena dirasa termasuk kata <code class="docutils literal notranslate"><span class="pre">stopword</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:</span>
+<span class="c1">#   for j in i:</span>
+<span class="c1">#     try:</span>
+<span class="c1">#       if(&#39;wk&#39; in j or &#39;kw&#39; in j):</span>
+<span class="c1">#         predata[predata.index(i)][i.index(j)] = predata[predata.index(i)].remove(j)</span>
+<span class="c1">#     except:</span>
+<span class="c1">#       pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:    </span>
+<span class="c1">#   for j in range(i.count(&#39;&#39;)):</span>
+<span class="c1">#     i.remove(&#39;&#39;)</span>
+<span class="c1">#   for j in range(i.count(None)):</span>
+<span class="c1">#     i.remove(None)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="menghapus-whitespase-karakter-kosong">
+<h3>Menghapus Whitespase (Karakter Kosong)<a class="headerlink" href="#menghapus-whitespase-karakter-kosong" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:</span>
+<span class="c1">#   for j in i:</span>
+<span class="c1">#     try:</span>
+<span class="c1">#       if(len(j) &lt;=2):</span>
+<span class="c1">#         predata[predata.index(i)][i.index(j)] = predata[predata.index(i)].remove(j)</span>
+<span class="c1">#     except:</span>
+<span class="c1">#       pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:    </span>
+<span class="c1">#   for j in range(i.count(&#39;&#39;)):</span>
+<span class="c1">#     i.remove(&#39;&#39;)</span>
+<span class="c1">#   for j in range(i.count(None)):</span>
+<span class="c1">#     i.remove(None)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="spell-checker">
+<h3>SPELL checker<a class="headerlink" href="#spell-checker" title="Permalink to this heading">#</a></h3>
+<p>Mengambil kumpulan kata dari KBBI serta kamus bahasa inggris karena dalam komentar tidak hanya berisikan bahasa indonesia, namun ada kemungkinan ada bahasa inggris.</p>
+<p>Jika menggunakan tools dan kamus pada <a class="reference external" href="https://norvig.com/spell-correct.html">https://norvig.com/spell-correct.html</a> , membutuhkan ram dan waktu yang banyak. sehingga tidak menggunakan cara tersebut untuk spell checker</p>
+<p>karena membutuhkan ram dan waktu yang banyak jadi menggunakan cara yang lain yaitu, menggunakan kata yang familiar pada kamus. Dimana kata akan di cek satu satu persatu dengan satu per satu huruf.</p>
+<p>Contoh:</p>
+<ul class="simple">
+<li><p>apa</p></li>
+</ul>
+<p>kata <code class="docutils literal notranslate"><span class="pre">&quot;apa&quot;</span></code> akan dicek satu kata per kata, <strong>perulangan</strong> 1 adalah <code class="docutils literal notranslate"><span class="pre">a</span></code> yang dicek, begitu seterusnya. sehingga menghasilkan paling banyak keluar pada bahasa indonesia, lalu mengambil kata yang dimasukkan pada list <code class="docutils literal notranslate"><span class="pre">[-1]</span></code></p>
+<p>Mengambil Kata Yang Sering Keluar Namun tidak termasuk diantara Bahasa indonesia dan Bahasa inggris. Dengan Asumsi jika sering keluar maka kosa kata benar namun belum ada di kamus manapun</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # bahasa indonesia</span>
+<span class="c1"># master = &quot;https://raw.githubusercontent.com/Wikidepia/indonesian_datasets/master/dictionary/wordlist/data/wordlist.txt&quot;</span>
+<span class="c1"># req = requests.get(master)</span>
+<span class="c1"># WORDS = req.text</span>
+<span class="c1"># WORDS = WORDS.replace(&#39;\n&#39;, &quot; &quot;)</span>
+<span class="c1"># WORDS = WORDS.split()</span>
+
+<span class="c1"># # bahasa inggris</span>
+<span class="c1"># master1 = &quot;https://raw.githubusercontent.com/dolph/dictionary/master/popular.txt&quot;</span>
+<span class="c1"># req1 = requests.get(master1)</span>
+<span class="c1"># WORDS1 = req1.text</span>
+<span class="c1"># WORDS1 = WORDS1.replace(&#39;\n&#39;, &quot; &quot;)</span>
+<span class="c1"># WORDS1 = WORDS1.split()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Proses Spell Cheker</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tempunq = []</span>
+<span class="c1"># for i in range (len(predata)):</span>
+<span class="c1">#   for j in range(len(predata[i])):</span>
+<span class="c1">#     if(predata[i][j] in WORDS):</span>
+<span class="c1">#       pass</span>
+<span class="c1">#     elif (predata[i][j] in WORDS1):</span>
+<span class="c1">#       pass    </span>
+<span class="c1">#     else:</span>
+<span class="c1">#       tempunq.append(predata[i][j])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># values, counts = np.unique(tempunq, return_counts=True)</span>
+<span class="c1"># temp_new = list(map(list,zip(values,counts)))</span>
+<span class="c1"># tempnew = []</span>
+<span class="c1"># # check jika count kurang dari 10 remove</span>
+<span class="c1"># for i in temp_new:</span>
+<span class="c1">#   if(i[1] &gt;= 5):</span>
+<span class="c1">#     tempnew.append(i[0])</span>
+<span class="c1">#     # temp_new.remove(i)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># def koreksi(word):</span>
+<span class="c1">#   ind = 0</span>
+<span class="c1">#   w = 0</span>
+<span class="c1">#   w2 = 0</span>
+<span class="c1">#   t = 0</span>
+<span class="c1">#   while ind &lt; len(word):</span>
+<span class="c1">#     for i in WORDS:</span>
+<span class="c1">#       if(word[0:ind] in i):</span>
+<span class="c1">#         w =ind</span>
+<span class="c1">#     for i in WORDS1:</span>
+<span class="c1">#       if(word[0:ind] in i):</span>
+<span class="c1">#         w2 =ind    </span>
+<span class="c1">#     for i in tempnew:</span>
+<span class="c1">#       if(word[0:ind] in i):</span>
+<span class="c1">#         t =ind    </span>
+<span class="c1">#     ind+=1</span>
+<span class="c1">#   return [w,w2,t]</span>
+
+
+<span class="c1"># def kandidat(values):</span>
+<span class="c1">#   maxind = pd.Series(values)</span>
+<span class="c1">#   return maxind.idxmax()</span>
+
+<span class="c1"># def check(word):</span>
+<span class="c1">#   hasilkor = koreksi(word)</span>
+<span class="c1">#   hasil = kandidat(hasilkor)</span>
+<span class="c1">#   tmpat =[]</span>
+<span class="c1">#   ind = 0</span>
+<span class="c1">#   # check word termasuk bahasa apa</span>
+<span class="c1">#   if(hasil == 0):</span>
+<span class="c1">#     while ind &lt; len(word):</span>
+<span class="c1">#       for i in range(len(WORDS)):</span>
+<span class="c1">#         if(word[0:ind] in WORDS[i]):</span>
+<span class="c1">#           tmpat.append(WORDS[i])</span>
+<span class="c1">#       ind+=1</span>
+<span class="c1">#   elif(hasil==1):</span>
+<span class="c1">#     while ind &lt; len(word):</span>
+<span class="c1">#       for i in range(len(WORDS1)):</span>
+<span class="c1">#         if(word[0:ind] in WORDS1[i]):</span>
+<span class="c1">#           tmpat.append(WORDS1[i])</span>
+<span class="c1">#       ind+=1</span>
+<span class="c1">#   elif(hasil==2):</span>
+<span class="c1">#     while ind &lt; len(word):</span>
+<span class="c1">#       for i in range(len(tempnew)):</span>
+<span class="c1">#         if(word[0:ind] in tempnew[i]):</span>
+<span class="c1">#           tmpat.append(tempnew[i])</span>
+<span class="c1">#       ind+=1</span>
+
+<span class="c1">#   return tmpat[-1]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in range (len(predata)):</span>
+<span class="c1">#   for j in range(len(predata[i])):</span>
+<span class="c1">#     if(predata[i][j] in WORDS):</span>
+<span class="c1">#       pass</span>
+<span class="c1">#     elif (predata[i][j] in WORDS1):</span>
+<span class="c1">#       pass</span>
+<span class="c1">#     elif (predata[i][j] in tempnew):</span>
+<span class="c1">#       pass    </span>
+<span class="c1">#     else:</span>
+<span class="c1">#       try:</span>
+<span class="c1">#         if(predata[i][j][0] ==&#39;-&#39;):</span>
+<span class="c1">#           predata[i][j] = predata[i][j].replace(&#39;-&#39;,&#39;&#39;)</span>
+<span class="c1">#           test = check(predata[i][j])</span>
+<span class="c1">#           predata[i][j] = test</span>
+<span class="c1">#         else:</span>
+<span class="c1">#           test = check(predata[i][j])</span>
+<span class="c1">#           predata[i][j] = test</span>
+<span class="c1">#       except:</span>
+<span class="c1">#           pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:</span>
+<span class="c1">#   for j in i:</span>
+<span class="c1">#     try:</span>
+<span class="c1">#       if(j.lower()==&#39;pak&#39;):</span>
+<span class="c1">#         predata[predata.index(i)][i.index(j)] = &#39;bapak&#39;</span>
+<span class="c1">#       elif(j.lower()==&#39;mba&#39;):</span>
+<span class="c1">#         predata[predata.index(i)][i.index(j)] = &#39;kakak&#39;</span>
+<span class="c1">#     except:</span>
+<span class="c1">#       pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lalu melakukan langkah untuk menghapus Stopword dan char spesial kembali</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in predata:    </span>
+<span class="c1">#   for j in range(i.count(&#39;-&#39;)):</span>
+<span class="c1">#     i.remove(&#39;-&#39;)</span>
+<span class="c1">#   for j in range(i.count(None)):</span>
+<span class="c1">#     i.remove(None)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># punctuation = &quot;!@#$%^&amp;*()’_+&lt;&gt;?:.,;!@#$%^&amp;*()/\[]=_&quot; </span>
+<span class="c1"># for i in predata:</span>
+<span class="c1">#   for j in i:</span>
+<span class="c1">#     predata[predata.index(i)][i.index(j)] = j.translate(str.maketrans(&quot;&quot;,&quot;&quot;,punctuation)).lower()</span>
+  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for i in range(len(predata)):</span>
+<span class="c1">#   predata[i] = &quot; &quot;.join(predata[i])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="stemming-kata-dengan-sastrawi">
+<h3>Stemming Kata Dengan Sastrawi<a class="headerlink" href="#stemming-kata-dengan-sastrawi" title="Permalink to this heading">#</a></h3>
+<p>Stemming adalah proses menghilangkan infleksi kata ke bentuk <code class="docutils literal notranslate"><span class="pre">dasarnya</span></code>, namun bentuk dasar tersebut tidak berarti sama dengan akar kata (root word).</p>
+<p>proses Stemming dilakukan <code class="docutils literal notranslate"><span class="pre">belakangan</span></code> karena tidak ingin melakukan proses ini dua kali, jadi dilakukan setelah proses Spell Checker. jika dilakukan sebelumnya akan ada kata yang mengandung arti yang sama namun penulisan yang salah dan ketika di spell akan menghasilkan dua kata, dimana dua kata tersebut mengandung makna yang sama.</p>
+<ul class="simple">
+<li><p>Misalnya proses stemming sebelum checker kata <code class="docutils literal notranslate"><span class="pre">“mendengarkan”</span></code>, <code class="docutils literal notranslate"><span class="pre">“medengarkan”</span></code> ditransformasi menjadi kata <code class="docutils literal notranslate"><span class="pre">“dengar”</span></code> , <code class="docutils literal notranslate"><span class="pre">“mendengarkan”</span></code>.</p></li>
+<li><p>Misalnya proses stemming sesudah checker kata<code class="docutils literal notranslate"> <span class="pre">“medengarkan”</span></code> akan dirubah dahulu menjadi <code class="docutils literal notranslate"><span class="pre">“mendengarkan”</span></code> sehingga menghasilkan <code class="docutils literal notranslate"><span class="pre">“dengar”</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># factory = StemmerFactory()</span>
+<span class="c1"># stemmer = factory.create_stemmer()</span>
+<span class="c1"># for i in predata:</span>
+<span class="c1">#   predata[predata.index(i)] = stemmer.stem(i)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df[&#39;Komentar&#39;] = predata</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="save-to-csv-data-preprosessing">
+<h3>Save To CSV data preprosessing<a class="headerlink" href="#save-to-csv-data-preprosessing" title="Permalink to this heading">#</a></h3>
+<p>menyimpan data yang sudah diproses dengan berbagai proses diatas</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/content/drive/MyDrive/prosaindata/DataCrawling/comments_youtube_preprosessing.csv&quot;</span>
+
+<span class="c1"># # # save to csv</span>
+
+<span class="c1"># if( os.path.exists(path) == True):</span>
+<span class="c1">#     os.remove(path)</span>
+<span class="c1"># df.to_csv(path)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mengambil-data-preprosessing">
+<h3>Mengambil data Preprosessing<a class="headerlink" href="#mengambil-data-preprosessing" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">])</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3a76962d-6f21-40d2-8c0a-c9b5144c8dc6">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Tanggal</th>
+      <th>Komentar</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>2023-05-06T07:38:15Z</td>
+      <td>saya pilih bapak ganjar pranowo untuk jadi jua...</td>
+      <td>Ar Gres</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2023-05-06T07:03:24Z</td>
+      <td>satria pining nyata bukan toko beberapa tokoh ...</td>
+      <td>imam malik</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>2023-05-05T22:40:13Z</td>
+      <td>fix jadi presiden ganjar pranowo</td>
+      <td>Sarif</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>2023-05-05T19:34:46Z</td>
+      <td>ada komen buzzer</td>
+      <td>oki bias</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>2023-05-05T17:05:32Z</td>
+      <td>ini calon capres profesional saya yakin indone...</td>
+      <td>Alikk Channel</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>995</td>
+      <td>2023-04-25T06:11:27Z</td>
+      <td>bapak tugi</td>
+      <td>Udin Kabol</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>996</td>
+      <td>2023-04-25T06:07:11Z</td>
+      <td>saya lihat ganjar kakak nana wigata video apa ...</td>
+      <td>Terataka Laragat</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>997</td>
+      <td>2023-04-25T06:01:43Z</td>
+      <td>jawab ragu tegas wibawa maju bapak ganjar pran...</td>
+      <td>Thecunn</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>998</td>
+      <td>2023-04-25T05:57:40Z</td>
+      <td>moga ganjar gagal</td>
+      <td>Neneng Erikawati</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>999</td>
+      <td>2023-04-25T05:55:57Z</td>
+      <td>ganjar the next bapak jokowi</td>
+      <td>Ruby Valentinesyah Lembah</td>
+    </tr>
+  </tbody>
+</table>
+<p>991 rows × 4 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3a76962d-6f21-40d2-8c0a-c9b5144c8dc6')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3a76962d-6f21-40d2-8c0a-c9b5144c8dc6 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3a76962d-6f21-40d2-8c0a-c9b5144c8dc6');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+</div>
+<div class="section" id="implementasi-ke-tf-idf">
+<h3>Implementasi ke TF-IDF<a class="headerlink" href="#implementasi-ke-tf-idf" title="Permalink to this heading">#</a></h3>
+<p>Untuk Penjelasan Detail Terkait TF-IDF dapat dilihat <a class="reference external" href="https://lala09-erha.github.io/prosaindata/Untitled4.html#implementasi-ke-metode-tf-idf">Disini</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Komentar&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span><span class="p">,</span><span class="n">CountVectorizer</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+<span class="n">countvectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+
+<span class="c1"># hasil fit_transfrom</span>
+<span class="n">X_train_tfidf</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">vectorizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="c1"># # save tf-idf</span>
+<span class="c1"># filename = &#39;/content/drive/MyDrive/prosaindata/model/vectorizer_youtube.sav&#39;</span>
+<span class="c1"># joblib.dump(vectorizer,filename)</span>
+
+<span class="c1"># menghitung jumlah</span>
+<span class="n">count_wm</span> <span class="o">=</span> <span class="n">countvectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># menampilkan hasil dan jumlah dari tfidf</span>
+<span class="n">count_tokens</span> <span class="o">=</span> <span class="n">countvectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="n">tfidf_tokens</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+
+<span class="n">df_countvect</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">count_wm</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span><span class="n">columns</span> <span class="o">=</span> <span class="n">count_tokens</span><span class="p">)</span>
+<span class="n">df_tfidfvect</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">X_train_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span><span class="n">columns</span> <span class="o">=</span> <span class="n">tfidf_tokens</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Count Vectorizer</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_countvect</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">TD-IDF Vectorizer</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_tfidfvect</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Count Vectorizer
+
+     aamiin  abad  abah  abaktinal  abal  abang  abangan  abdi  abis  acara  \
+0         0     0     0          0     0      0        0     0     0      0   
+1         0     0     0          0     0      0        0     0     0      0   
+2         0     0     0          0     0      0        0     0     0      0   
+3         0     0     0          0     0      0        0     0     0      0   
+4         0     0     0          0     0      0        0     0     0      0   
+..      ...   ...   ...        ...   ...    ...      ...   ...   ...    ...   
+986       0     0     0          0     0      0        0     0     0      0   
+987       0     0     0          0     0      0        0     0     0      0   
+988       0     0     0          0     0      0        0     0     0      0   
+989       0     0     0          0     0      0        0     0     0      0   
+990       0     0     0          0     0      0        0     0     0      0   
+
+     ...  zoosadisme  zoosemiotika  zoosporangium  zooteknika  zootoksin  \
+0    ...           0             0              0           0          0   
+1    ...           0             0              0           0          0   
+2    ...           0             0              0           0          0   
+3    ...           0             0              0           0          0   
+4    ...           0             0              0           0          0   
+..   ...         ...           ...            ...         ...        ...   
+986  ...           0             0              0           0          0   
+987  ...           0             0              0           0          0   
+988  ...           0             0              0           0          0   
+989  ...           0             0              0           0          0   
+990  ...           0             0              0           0          0   
+
+     zoozigosfer  zukini  zulhijah  zumbai  zuriat  
+0              0       0         0       0       0  
+1              0       0         0       0       0  
+2              0       0         0       0       0  
+3              0       0         0       0       0  
+4              0       0         0       0       0  
+..           ...     ...       ...     ...     ...  
+986            0       0         0       0       0  
+987            0       0         0       0       0  
+988            0       0         0       0       0  
+989            0       0         0       0       0  
+990            0       0         0       0       0  
+
+[991 rows x 2677 columns]
+
+TD-IDF Vectorizer
+
+     aamiin  abad  abah  abaktinal  abal  abang  abangan  abdi  abis  acara  \
+0       0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+1       0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+2       0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+3       0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+4       0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+..      ...   ...   ...        ...   ...    ...      ...   ...   ...    ...   
+986     0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+987     0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+988     0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+989     0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+990     0.0   0.0   0.0        0.0   0.0    0.0      0.0   0.0   0.0    0.0   
+
+     ...  zoosadisme  zoosemiotika  zoosporangium  zooteknika  zootoksin  \
+0    ...         0.0           0.0            0.0         0.0        0.0   
+1    ...         0.0           0.0            0.0         0.0        0.0   
+2    ...         0.0           0.0            0.0         0.0        0.0   
+3    ...         0.0           0.0            0.0         0.0        0.0   
+4    ...         0.0           0.0            0.0         0.0        0.0   
+..   ...         ...           ...            ...         ...        ...   
+986  ...         0.0           0.0            0.0         0.0        0.0   
+987  ...         0.0           0.0            0.0         0.0        0.0   
+988  ...         0.0           0.0            0.0         0.0        0.0   
+989  ...         0.0           0.0            0.0         0.0        0.0   
+990  ...         0.0           0.0            0.0         0.0        0.0   
+
+     zoozigosfer  zukini  zulhijah  zumbai  zuriat  
+0            0.0     0.0       0.0     0.0     0.0  
+1            0.0     0.0       0.0     0.0     0.0  
+2            0.0     0.0       0.0     0.0     0.0  
+3            0.0     0.0       0.0     0.0     0.0  
+4            0.0     0.0       0.0     0.0     0.0  
+..           ...     ...       ...     ...     ...  
+986          0.0     0.0       0.0     0.0     0.0  
+987          0.0     0.0       0.0     0.0     0.0  
+988          0.0     0.0       0.0     0.0     0.0  
+989          0.0     0.0       0.0     0.0     0.0  
+990          0.0     0.0       0.0     0.0     0.0  
+
+[991 rows x 2677 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ekseksi-perform-svd">
+<h3>Ekseksi Perform SVD<a class="headerlink" href="#ekseksi-perform-svd" title="Permalink to this heading">#</a></h3>
+<p><strong>Ukuran Matrix Hasil TF-IDF</strong> Dan <code class="docutils literal notranslate"><span class="pre">Sebelum</span></code> di Ekseksi Dengan SVD</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_tfidfvect</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(991, 2677)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hasil <code class="docutils literal notranslate"><span class="pre">Setelah</span></code> diekseksi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the number of topics or components</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+<span class="kn">from</span> <span class="nn">sklearn.utils.extmath</span> <span class="kn">import</span> <span class="n">randomized_svd</span>
+
+<span class="c1"># Jumlah Topik yang diingin dibentuk</span>
+<span class="n">num_components</span><span class="o">=</span><span class="mi">2</span>
+
+<span class="c1"># Create SVD object</span>
+<span class="n">lsa</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">num_components</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="c1"># U, Sigma, VT = randomized_svd(X_train_tfidf,n_components=num_components, n_iter=100, random_state=42)</span>
+
+<span class="c1"># Fit SVD model on data</span>
+<span class="n">X_transformed</span>  <span class="o">=</span> <span class="n">lsa</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train_tfidf</span><span class="p">)</span>
+
+<span class="c1"># menentukan Hasil</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">lsa</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">T</span>
+<span class="n">Sigma_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">lsa</span><span class="o">.</span><span class="n">singular_values_</span><span class="p">)</span>
+<span class="n">VT</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_transformed</span> <span class="o">/</span> <span class="n">lsa</span><span class="o">.</span><span class="n">singular_values_</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran Matrix U : </span><span class="si">{</span><span class="n">U</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran Matrix Λ : </span><span class="si">{</span><span class="n">Sigma_matrix</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran Matrix VT : </span><span class="si">{</span><span class="n">VT</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ukuran Matrix U : (2677, 2)
+Ukuran Matrix Λ : (2, 2)
+Ukuran Matrix VT : (2, 991)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extract-topics-and-terms">
+<h3>Extract topics and terms<a class="headerlink" href="#extract-topics-and-terms" title="Permalink to this heading">#</a></h3>
+<p>Bobot <code class="docutils literal notranslate"><span class="pre">Kata</span></code> terhadap masing masing Topik</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print the topics with their terms</span>
+<span class="n">terms</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil Jika Matrix U di transpose </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">component</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lsa</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+    <span class="c1"># print(component)</span>
+    <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span>
+    <span class="n">top_terms_key</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">zipped</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">top_terms_list</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">top_terms_key</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">top_terms_key</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="p">,</span><span class="n">top_terms_list</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bobot : &quot;</span><span class="p">,</span><span class="n">test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil Matrix U</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">lsa</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Jika Matrix U di transpose 
+
+Topic 0:  [&#39;ganjar&#39;, &#39;bapak&#39;, &#39;presiden&#39;, &#39;partai&#39;, &#39;jadi&#39;]
+Bobot :  [0.5317970196914461, 0.4860510302915583, 0.21075768710694415, 0.19644017813147763, 0.1824403386622991]
+Topic 1:  [&#39;partai&#39;, &#39;tugas&#39;, &#39;rakyat&#39;, &#39;cuma&#39;, &#39;nya&#39;]
+Bobot :  [0.6436991464881094, 0.6001173792548713, 0.10699163544400052, 0.07134933959778217, 0.051349689802792406]
+
+
+Hasil Matrix U
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 3.54657886e-02, -1.84774859e-02],
+       [ 5.92571177e-04,  5.05202177e-04],
+       [ 2.41988583e-03, -2.51154800e-04],
+       ...,
+       [ 3.87492729e-03,  3.23151647e-03],
+       [ 5.84207881e-03, -1.62940876e-03],
+       [ 1.80926954e-04,  4.59986832e-05]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sigma_matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.32864417, 0.        ],
+       [0.        , 4.16030601]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bobot <code class="docutils literal notranslate"><span class="pre">Dokumen</span></code> Terhadap masing masing Topik</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print the topics with their terms</span>
+
+<span class="n">terms</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil Jika Matrix V di transpose </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">component</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">VT</span><span class="p">):</span>
+    <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span>
+    <span class="n">top_terms_key</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">zipped</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">top_terms_list</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">top_terms_key</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">top_terms_key</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="p">,</span><span class="n">top_terms_list</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bobot : &quot;</span><span class="p">,</span><span class="n">test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hasil Jika Matrix V di transpose 
+
+Topic 0:  [&#39;dar&#39;, &#39;bensin&#39;, &#39;biaya&#39;, &#39;carillon&#39;, &#39;asam&#39;]
+Bobot :  [0.10526571669884331, 0.09979968686860488, 0.09979968686860488, 0.09579666915447713, 0.09477086663907902]
+Topic 1:  [&#39;dewasa&#39;, &#39;fikih&#39;, &#39;imigran&#39;, &#39;kak&#39;, &#39;jawab&#39;]
+Bobot :  [0.20995330900593717, 0.20995330900593717, 0.20995330900593717, 0.20995330900593717, 0.1585438547423136]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">VT</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.03683106,  0.01560628,  0.0624099 , ...,  0.05054616,
+         0.04069987,  0.06150107],
+       [-0.0125985 ,  0.00844066, -0.01807977, ..., -0.02032522,
+        -0.02012819, -0.02936047]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Untitled6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Tugas 8 | Extractive Summarizer</strong></p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengambilan-data-comments-youtube">Pengambilan Data (Comments Youtube)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprosessing-data">Preprosessing Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seleksi-column">Seleksi Column</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokenisasi-data">Tokenisasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-stopword-dengan-sastrawi">Menghapus StopWord dengan sastrawi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-menjadi-lower-case-dan-memeriksa-spesial-char">Mengubah menjadi lower case dan Memeriksa Spesial char</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-angka">Menghapus Angka</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-wkwk">Menghapus Wkwk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghapus-whitespase-karakter-kosong">Menghapus Whitespase (Karakter Kosong)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spell-checker">SPELL checker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stemming-kata-dengan-sastrawi">Stemming Kata Dengan Sastrawi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-to-csv-data-preprosessing">Save To CSV data preprosessing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-data-preprosessing">Mengambil data Preprosessing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-ke-tf-idf">Implementasi ke TF-IDF</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ekseksi-perform-svd">Ekseksi Perform SVD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extract-topics-and-terms">Extract topics and terms</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fikri Ainun Najib
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
