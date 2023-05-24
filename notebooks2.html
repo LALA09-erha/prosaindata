@@ -557,14 +557,16 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dis
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list to dataframe</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/content/drive/MyDrive/prosaindata/DataCrawling/Data_pta.csv&quot;</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;NIM&#39;</span><span class="p">,</span><span class="s1">&#39;Judul&#39;</span><span class="p">,</span> <span class="s1">&#39;Penulis&#39;</span><span class="p">,</span><span class="s1">&#39;Abstrak&#39;</span><span class="p">])</span>
-<span class="c1"># add column</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Program Studi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Teknik Informatika&quot;</span>
-<span class="c1"># save to csv</span>
-<span class="k">if</span><span class="p">(</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="c1"># path = &quot;/content/drive/MyDrive/prosaindata/DataCrawling/Data_pta.csv&quot;</span>
+<span class="c1"># df = pd.DataFrame(temp, columns =[&#39;NIM&#39;,&#39;Judul&#39;, &#39;Penulis&#39;,&#39;Abstrak&#39;])</span>
+<span class="c1"># # add column</span>
+<span class="c1"># df[&#39;Program Studi&#39;] = &quot;Teknik Informatika&quot;</span>
+<span class="c1"># # save to csv</span>
+<span class="c1"># if( os.path.exists(path) == True):</span>
+<span class="c1">#     os.remove(path)</span>
+<span class="c1"># df.to_csv(path)</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/LALA09-erha/File-semester5/master/PSD/Data%20Crawling/Data_pta.csv&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>

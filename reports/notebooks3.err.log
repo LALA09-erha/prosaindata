@@ -30,8 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['data_csv = []', 'index = 0', 'for i in data_page:', '  title_temp = ""', '  artikel_temp = ""']
+['# mengecek apakah artikel berlanjut', 'data_page = []', 'ind = 0', 'for i in data_artikels:', '    page_link = i']
 ...
-['  # print(artikel_temp)', '  # print("--------------------------------")', '  data_csv.append([title_temp,artikel_temp])', 'print((data_csv))', 'print(len(data_csv))']
+['        else:', "          data_page[ind].append(link['href'])", '    ', 'print(data_page)', 'print(len(data_page))']
 -------------------
 
